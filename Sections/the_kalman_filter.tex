@@ -1,0 +1,103 @@
+\subsection*{The Linear Kalman Filter}
+We briefly review the now classic and widely used linear Kalman filter before discussing its nonlinear variant, the ensemble Kalman filter.  The linear Kalman filter supposes that some true state of a system, described by the time dependent $N_{m}$-dimensional vector at time $t_{n}$, say $x^{(tr)}_{n}$, is given via the model 
+\[
+x^{(tr)}_{n} = Mx^{(tr)}_{n-1} + \epsilon^{(m)}_{n-1},
+\]
+where $M$ is a model matrix which attempts to transform the prior true state into the next true state.  However, we suppose that the model is not complete to describe the true state, and that model deficencies manifest themselves via the error vector $\epsilon_{n-1}$.  The error vectors are assumed to consist of zero-mean Gaussian random variables with the further assumption that 
+\[
+\mathbb{E}\left[\epsilon_{j}^{(m)}\left(\epsilon_{k}^{(m)}\right)^{T}\right] = \delta_{jk} Q_{k},
+\]
+which is to say that the errors are uncorrelated in time, while at a given time step there is one covariance matrix to typefy the deviation among the model errors.  Likewise, we suppose that at time $t_{n}$, we have an $N_{d}$-dimensional vector of measurements given by $d_{n}$ which corresponds to the true state via the equation 
+\[
+d_{n} = Hx^{(tr)}_{n} + \epsilon^{(d)}_{n},
+\]
+where $H$ is the measurment matrix and the errors in measurement are incorporated into the zero-mean, Gaussian vector $\epsilon^{(d)}_{n}$, which we further suppose satisfies the identity
+\[
+\mathbb{E}\left[\epsilon^{(d)}_{j}\left(\epsilon_{k}^{(d)}\right)^{T}\right] = \delta_{jk} R_{k}, ~ \mathbb{E}\left[\epsilon_{j}^{(m)}\left(\epsilon_{k}^{(d)}\right)^{T}\right] = 0.
+\]
+
+We now suppose that, in effect, we have no access to the true state.  However, we suppose that at time $t_{n}$, through some mechanism, we have a $N_{m}$-dimensional {\it forecast}, say $x^{(f)}_{n}$.  We can then define the error covariance matrix 
+\[
+P^{(f)}_{n} = \mathbb{E}\left[\left(x^{(f)}_{n} - x^{(tr)}_{n}\right)\left(x^{(f)}_{n} - x^{(tr)}_{n}\right)^{T} \right].
+\]
+We then ask, given a forecast, can we incorporate the data in such a way to create a better estimate to the true state?  To do this, we suppose that this better {\it analysis} state, say $x^{(a)}_{n}$ is given by 
+\[
+x^{(a)}_{n} = x^{(f)}_{n} + K_{n}(d_{n} - Hx^{(f)}_{n}),
+\]
+where the gain matrix $K_{n}$ is chosen so as to minimize the trace of the affiliated error covariance matrix $P^{(a)}_{n}$ where
+\[
+P^{(a)}_{n} = \mathbb{E}\left[\left(x^{(a)}_{n} - x^{(tr)}_{n}\right)\left(x^{(a)}_{n} - x^{(tr)}_{n}\right)^{T} \right].
+\]
+Thus, the analysis vector represents the best estimate to the true state using the given forecast and measurements of the system.  As can be shown, $K_{n}$ is then given by 
+\[
+K_{n} = P^{(f)}_{n}H^{T}\left(HP^{(f)}_{n}H^{T} + R_{n} \right)^{-1}.
+\]
+This optimization procedure likewise gives us the affiliated analysis error covariance matrix $P^{(a)}_{n}$ where
+\[
+P^{(a)}_{n} = (I-K_{n}H)P^{(f)}_{n}.
+\]
+At this point, we note that with a forecast estimate $x^{(f)}_{n}$ and error covariance matrix $P^{(f)}_{n}$, we were able to create a best estimate incorporating the data obtained via measurement to produce the analysis estimate $x^{(a)}_{n}$ with the corresponding error covariance matrix $P^{(a)}_{n}$.  To go to the next time step then, we let
+\[
+x^{(f)}_{n+1} = Mx^{(a)}_{n}, ~ P_{n+1}^{(f)} = MP^{(a)}_{n}M^{T} + Q_{n}.
+\]
+Note the recursive structure of the Kalman filter, whereby information from only the immediately previous time-step is necessary to progress to the next time step.  
+
+\subsection*{The Ensemble Kalman Filter}
+As noted, the above process is well-defined when modeling linear systems.  In the case though that the model is nonlinear, i.e.
+\[
+x^{(tr)}_{n} = f\left(x^{(tr)}_{n-1}\right) + \epsilon^{(m)}_{n-1},
+\]
+then more thought is necessary in order to perform the filtration.  In particular, we see that the update step associated with generating the forecast error covariance matrix is no longer applicable.  While one could replace $M$ with linearizations around the computed analysis estimate, as in the Extended Kalman Filter, this has proved to be both computationally costly and unstable with respect to error.  
+
+Instead, we introduce the idea of an ensemble of say $N_{e}$ forecasts in which now $x^{(f)}_{n}$ denotes an $N_{m}\times N_{e}$ matrix which generates the ensemble average, $\bar{x}^{(f)}_{n}$ where
+\[
+\bar{x}^{(f)}_{n} = \frac{1}{N_{e}}\sum_{j=1}^{N_{e}} x^{(f)}_{n,j}.
+\]
+Using this average as an approximation to the true state, we can likewise generate an estimate to the error covariance matrix $P^{(f)}_{n}$ via the formula
+\begin{equation}
+P^{(f)}_{n} \approx \frac{1}{N_{e}-1}\sum_{j=1}^{N_{e}}\left(x^{(f)}_{n,j} - \bar{x}^{(f)}_{n}\right)\left(x^{(f)}_{n,j} - \bar{x}^{(f)}_{n}\right)^{T}.
+\label{empcov}
+\end{equation}
+Correspondingly, given the data vector $d_{n}$, we build a corresponding ensemble represented by the data matrix $d_{n}^{(e)}$ whose $j^{th}$-column is given by 
+\[
+d^{(e)}_{n,l} = d_{n} + \tilde{\epsilon}_{n,l}, ~ l=1\cdots N_{e},
+\]
+where the vectors $\tilde{\epsilon}_{n,j}$ are zero-mean Gaussian random vectors such that 
+\[
+\lim_{N_{e}\rightarrow\infty} \frac{1}{N_{e}-1}\sum_{l=1}^{N_{e}}\tilde{\epsilon}_{j,l}\tilde{\epsilon}_{k,l}^{T} = \delta_{jk}R_{k}. 
+\]
+
+In the Ensemble Kalman Filter, the gain matrix $K_{n}$ is still given by the formula above, but with the error covariance matrices given via Equation \eqref{empcov}.  This then allows for an analysis state, say $x^{(a)}_{n}$ ensemble-matrix approximation to be computed which is consistent with the classic Kalman filter in the linear, infinite ensemble number limit.  To complete the recursive cycle then, we find the next ensemble-forecast matrix via
+\[
+x^{(f)}_{n+1} = f\left(x^{(a)}_{n}\right).
+\]
+Averages and approximate error covariance matrices are computed as above, and the Ensemble Kalman Filter cycle is continued.  
+
+\subsection*{Eularian Data Assimilation}
+In contrast to the Lagrangian approach, we focus on using Eularian measurements as the source of the data used in the Kalman filter.  Given that most wave height measurements are obtained via pressure plates, which corresponds to an Eularian measurement, this makes an Eularian data assimilation approach more natural than a Lagrangian one.  To do this, we suppose that we have at some set of fixed locations, say $x^{(p)}_{j}$, $j=1\cdots N_{f}$, pressure plates over which we obtain surface height measurements $\eta(x^{(p)}_{j},t)+\epsilon^{(d)}_{j}(t)$.  We likewise, using standard pseudo-spectral methods for solving the water-wave problem, have at any given time a numerically computed approximation to the surface, say $\tilde{\eta}(x,t)$, where 
+\[
+\tilde{\eta}(x,t) = -\frac{1}{2K}\sum_{j=-K+1}^{K}\hat{\eta}_{j}e^{i\pi jx/L_{x}}, ~ x \in [-L_{x},L_{x}].
+\]
+Note, the scaling and sign choice are commensurate with the standard implementation of the Fast Fourier Transform in Matlab, NumPy, and so forth.  Given the requirement that $\tilde{\eta}(x,t)$ is real, we have the symmetry constraint $\hat{\eta}_{-j} = \hat{\eta}^{\ast}_{j}$.  For ease then, we set $\hat{\eta}_{K}=0$, and note that the above representation for $\tilde{\eta}(x,t)$ can be rewritten as 
+\[
+\tilde{\eta}(x,t) = -\frac{1}{2K}\left(\hat{\eta}_{0} + 2\sum_{j=1}^{K-1} \left( \mbox{Re}(\hat{\eta}_{j})\cos\left(\frac{\pi j x}{L_{x}}\right) -  \mbox{Im}(\hat{\eta}_{j})\sin\left(\frac{\pi j x}{L_{x}}\right)\right) \right), 
+\]
+We therefore see that when comparing data to model forecasts, the observation operator $H=-\tilde{H}/K$, where $\tilde{H}$ is given by the Vandermonde like matrix
+\[
+\tilde{H} =
+\bp 
+1/2 & \cos(\tilde{x}_{1})  & \cdots & \cos( (K-1) \tilde{x}_{1}) & \sin(\tilde{x}_{1}) & \cdots &  \sin( (K-1) \tilde{x}_{1}) \\  
+1/2 & \cos(\tilde{x}_{2})  & \cdots & \cos( (K-1) \tilde{x}_{2}) & \sin(\tilde{x}_{2}) & \cdots &  \sin( (K-1) \tilde{x}_{2}) \\
+\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 
+1/2 & \cos(\tilde{x}_{N_{f}})  & \cdots & \cos( (K-1) \tilde{x}_{N_{f}}) & \sin(\tilde{x}_{N_{f}}) & \cdots &  \sin( (K-1) \tilde{x}_{N_{f}})
+\ep 
+\]
+with $\tilde{x}_{j} = \pi x^{(p)}_{j}/L_{x}$.  Throughout the remainder of this section, we take the covariance matrices $Q_{n}$ and $R_{n}$ to be $\sigma^{2}I$, where $I$ denotes the identity matrix appropriate to the corresponding dimensionality of the random variable in question, and $\sigma$ corresponds to the variance of the associated Gaussian random variables.  
+
+In a similar vein, we also have to decide how to initialize the filter.  In real-world conditions, we would generally be obliged to generate real world forecasts from existing buoy data as opposed to being able to capture a sea state via say acoustic imaging done from a boat.  Thus, we suppose that at time $t=0$, we have some set of pressure plate measurements giving us the initial surface heights $\eta(x_{j}^{p},0) + \epsilon^{(d)}_{j}$.  By interpolating and transforming this data, we can initialize the filter with respect to the surface height.  However, this leaves the determination of the initial surface velocity potential $q(x,0)$ in question.  It is worth noting that at best, one might hope to find a derivative of this quantity using the identity
+\[
+q_{x} = \phi_{x} + \epsilon \eta_{x}\phi_{z} = \dot{x} + \epsilon \eta_{x}\dot{z},
+\]
+so this is something that would still only be determined up to a constant.  Perhaps since the buoy is tethered one can possibly estimate some of the relevant quantities, but suffice to say, it is not immediately clear how one would determine an initial estimate of this variable.  Thus, without any other information, we initialize the surface velocity potential with zero-mean, $\sigma$-variance Gaussian noise.  Thus, we effectively look at a wide range of flow fields, limited only by the requirements on the variance and mean.  Note, in order then to get meaningful results, this inidicates that we should let the number of ensembles $N_{e}\gg1$, which is already in accord with best practice.  
+
+

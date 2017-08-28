@@ -1,0 +1,27 @@
+
+Throughout the remainder of this paper, we focus on solving the free boundary value problem 
+\begin{align*}
+\Delta \phi = 0, & ~~ -h < z < \eta(x,t) \\ 
+\phi_{z} = 0, & ~~ z=-h\\
+\eta_{t} + \eta_{x}\phi_{x}-\phi_{z} = 0, & ~~ z = \eta(x,t) \\ 
+\phi_{t} + \frac{1}{2}\left|\nabla \phi \right|^{2} + g\eta = 0, & ~~ z=\eta(x,t),
+\end{align*}
+where $\phi(x,z,t)$ is the velocity potential and the free fluid surface is given by $z=\eta(x,t)$.  As pointed out in \cite{yue} and \cite{wilkening}, the AFM/DNO method is best suited to shallow water environments.  We therefore introduce the following non-dimensionalizations
+\[
+\tilde{x} = \frac{x}{\lambda}, ~ \tilde{z} = \frac{z}{h}, ~ \tilde{t} = \frac{\sqrt{gh}}{\lambda} t , ~ \eta = a \tilde{\eta}, ~ \phi = \frac{ag\lambda}{\sqrt{gh}}\tilde{\phi}, 
+\]
+and non-dimensional parameters
+\[
+\epsilon = \frac{a}{h}, ~ \mu = \frac{h}{\lambda}, 
+\]
+whereby we can, after dropping tildes, rewrite the free surface problem in the non-dimesnional form
+\begin{align*}
+\phi_{xx} + \frac{1}{\mu^{2} }\phi_{zz} = 0, & ~~ -1 < z < \epsilon\eta(x,t), \\ 
+\phi_{z} = 0, & ~~ z=-1,\\
+\eta_{t} + \epsilon\eta_{x}\phi_{x}-\frac{1}{\mu^{2}}\phi_{z} = 0, & ~~ z = \epsilon\eta(x,t), \\ 
+\phi_{t} + \frac{\epsilon}{2}\left(\phi_{x}^{2} + \frac{1}{\mu^{2}}\phi_{z}^{2}\right) + \eta = 0, & ~~ z=\epsilon\eta(x,t).
+\end{align*}
+Here, $\epsilon$ is a measure of the characteristic wave amplitude, $a$, to the quiescent fluid depth, $h$, while $\mu$ is a measure of the quiescent fluid depth to the characteristic wavelength, $\lambda$, of the free surface waves.  We will describe the fluid as being `shallow-water' when $\epsilon$ and $\mu$ are both small.  For the purposes of this report, we will choose $\epsilon = .1$ and $\mu = \sqrt{\epsilon}$, which corresponds to looking at meter high waves over ten meters of fluid, with characteristic wavelengths then on the order of thirty meters.  Our choice of $\mu=\sqrt{\epsilon}$ is the one used to derive the Korteweg--de Vries equation, which is a classic shallow water model.  In the following, we look at an approach whereby the free boundary value problem above becomes a closed system in terms of the surface variables $\eta(x,t)$ and $q(x,t)$ where the surface potential $q(x,t)$ is defined to be 
+\[
+q(x,t) = \phi(x,\epsilon\eta(x,t),t),
+\]

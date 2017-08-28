@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{yue}
+D.G. Dommermuth and D.K.P. Yue.
+\newblock A high-order spectral method for the study of nonlinear gravity
+  waves.
+\newblock {\em J. Fluid Mech.}, 184:267--288, 1987.
+
+\bibitem{wilkening}
+J.~Wilkening and V.~Vasan.
+\newblock Comparison of five methods of computing the {D}irichlet--{N}eumann
+  operator for the water wave problem.
+\newblock In {\em Nonlinear Wave Equations: Analytic and Computational
+  Techniques}. AMS, 2015.
+
+\bibitem{zakharov}
+V.E. Zakharov.
+\newblock Stability of periodic waves of finite amplitude on the surface of a
+  deep fluid.
+\newblock {\em Zhurnal Prikladnoi Mechaniki i Teckhnicheskoi Fiziki}, 8:86--94,
+  1968.
+
+\bibitem{craig}
+W.~Craig and C.~Sulem.
+\newblock Numerical simulation of gravity waves.
+\newblock {\em J. Comput. Phys.}, 108:73--83, 1993.
+
+\bibitem{afm}
+M.J. Ablowitz, A.S. Fokas, and Z.H. Musslimani.
+\newblock On a new non-local formulation of water waves.
+\newblock {\em J. Fluid Mech.}, 562:313--343, 2006.
+
+\end{thebibliography}
