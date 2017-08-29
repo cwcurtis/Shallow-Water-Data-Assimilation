@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  28 AUG 2017 09:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  29 AUG 2017 09:27
 entering extended mode
-**C:/Users/ccurtis/Google*Drive/Shallow_Water_Data_Assimilation/data_assimilati
-on.tex
+**data_assimilation.tex
 
-("C:/Users/ccurtis/Google Drive/Shallow_Water_Data_Assimilation/data_assimilati
-on.tex"
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
+lation.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -33,8 +32,8 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\Sections/header
-.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/he
+ader.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
@@ -170,8 +169,8 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@thm=\count103
 \c@lem=\count104
 )
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\data_assimilati
-on.aux")
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
+lation.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -213,21 +212,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: No \author given.
 
 
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\Sections/introd
-uction.tex" [1
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/in
+troduction.tex" [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\Sections/afm_dn
-o_method.tex" [2])
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\Sections/the_ka
-lman_filter.tex" [3] [4] [5]
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/af
+m_dno_method.tex" [2])
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/th
+e_kalman_filter.tex" [3] [4] [5]
 Overfull \hbox (27.75818pt too wide) detected at line 94
 [] \OT1/cmr/m/n/10.95 = []
  []
 
 [6])
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\Sections/assimi
-lation.tex" [7]
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/as
+similation.tex" [7]
 <Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=38, 1445.4pt x 691.58376
 pt>
 File: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type pdf)
@@ -286,41 +285,41 @@ Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf u
 sed on input line 34.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 )
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\data_assimilati
-on.bbl") [8] [9 <C:/Users/ccurtis/Google Drive/Shallow_Water_Data_Assimilation/
-Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <C:/Users/ccurtis/Google Dri
-ve/Shallow_Water_Data_Assimilation/Images/histogram_tf_20_sig_pt1_4_vs8pplates_
-Mval_1.pdf> <C:/Users/ccurtis/Google Drive/Shallow_Water_Data_Assimilation/Imag
-es/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>] [10 <C:/Users/ccurtis/Google 
-Drive/Shallow_Water_Data_Assimilation/Images/wave_tf_20_sig_pt1_4_vs8pplates_Mv
-al_14.pdf> <C:/Users/ccurtis/Google Drive/Shallow_Water_Data_Assimilation/Image
-s/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf> <C:/Users/ccurtis/Google Dr
-ive/Shallow_Water_Data_Assimilation/Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mv
-al_14.pdf>] [11]
-("C:\Users\ccurtis\Google Drive\Shallow_Water_Data_Assimilation\data_assimilati
-on.aux") ) 
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
+lation.bbl") [8] [9 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Gi
+t-Clone/Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <D:/My Documents/Des
+ktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/histogram_tf_20_sig_pt1_4
+_vs8pplates_Mval_1.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilatio
+n-Git-Clone/Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>] [10 <D:/My Do
+cuments/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/wave_tf_20_sig
+_pt1_4_vs8pplates_Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assi
+milation-Git-Clone/Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf> <D:
+/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/rmserr_t
+f_20_sig_pt1_4_vs8pplates_Mval_14.pdf>] [11]
+("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
+lation.aux") ) 
 Here is how much of TeX's memory you used:
  3283 strings out of 493921
- 48607 string characters out of 3147276
+ 48687 string characters out of 3147276
  110362 words of memory out of 3000000
  6541 multiletter control sequences out of 15000+200000
  12319 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 38i,12n,38p,1354b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data_assimilation.pdf (11 pages, 248813 bytes).
+ 38i,12n,38p,1292b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on data_assimilation.pdf (11 pages, 248831 bytes).
 PDF statistics:
  216 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,6 +1,6 @@
 We now present results.  For the true flow, we take $L_{x}=10$
 \[
-\eta(x,0) = \cos(\tilde{x}), ~ q(x,0) = \sin(\tilde{x}), ~ \tilde{x} = \frac{\pi x}{10},
+\eta(x,0) = \cos(\tilde{x}), ~ q(x,0) = \sin(\tilde{x}), ~ \tilde{x} = \frac{\pi}{L_{x}}x,
 \]
 and use a pseudo-spectral scheme with $K_{T}=256$ modes and a 4th-order Runge--Kutta scheme with an integrating factor and time step $dt=10^{-2}$. We take $\epsilon=.1$ and $\mu=\sqrt{\epsilon}$.  The number of terms used in the DNO expansion is $M=14$, which generally ensures machine precision accuracy for relatively long time evolutions.  As for how we assimilate data, we set the variance $\sigma=.1$, and the number of ensemble members $N_{e}=3200$.  We truncate the DNO expansions at $M=1$ in part to allow for the effect of far lower order models to be seen in the data analysis process.  We take a sampling rate in time of $dt_{s}=.5$, which is 50 times that of the time step of the full numerical solver.  We likewise though use a 4th-order Runge--Kutta scheme with an integrating factor in order to perform the analysis to forecast update.  In order to provide comparisons, we then look at two simulations, one in which we have four equally spaced pressure plates in the domain $[-10,10]$, and one in which we have eight.  We then run the simulation to $t_{f}=20$, which given the choice of $\epsilon$, is a long enough period of time for nonlinear effects to create significant distortions of the original wave profile.  
 

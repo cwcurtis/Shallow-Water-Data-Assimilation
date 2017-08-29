@@ -47,21 +47,13 @@ xlabel('$x$','Interpreter','LaTeX','FontSize',30)
 legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$','$\eta(x,t_{f})$'},'Interpreter','LaTeX')
 
 figure(2)
-plot(Xvals,sf_error,'k--',Xvals,tf_error,'k-','LineWidth',2)
-h = set(gca,'FontSize',30);
-set(h,'Interpreter','LaTeX')
-xlabel('$x$','Interpreter','LaTeX','FontSize',30)
-ylabel('$\left|\eta(x,t_{f})-\eta_{a}(x,t_{f})\right|$','Interpreter','LaTeX','FontSize',30)
-legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$'},'Interpreter','LaTeX')
-
-figure(3)
 plot(eraxis,sf_dist,'k--',eraxis,tf_dist,'k-','LineWidth',2)
 h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
 xlabel('$\log_{10} \left|E_{a}\right|$','Interpreter','LaTeX','FontSize',30)
 legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$'},'Interpreter','LaTeX')
 
-figure(4)
+figure(3)
 plot(tvals,msqerror_sfloat,'k--',tvals,msqerror_tfloat,'k-','LineWidth',2)
 h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
