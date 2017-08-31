@@ -30,4 +30,15 @@ M.J. Ablowitz, A.S. Fokas, and Z.H. Musslimani.
 \newblock On a new non-local formulation of water waves.
 \newblock {\em J. Fluid Mech.}, 562:313--343, 2006.
 
+\bibitem{jones1}
+L.~Kuznetsov, K.~Ide, and C.K.R.T. Jones.
+\newblock A method for assimilation of {L}agrangian data.
+\newblock {\em Mon. Wea. Rev.}, 131:2247--2260, 2003.
+
+\bibitem{jones2}
+H.~Salman, L.~Kuznetsov, and C.K.R.T. Jones.
+\newblock A method for assimilating {L}agrangian data into a
+  shallow-water-equation ocean model.
+\newblock {\em Mon. Wea. Rev.}, 134:1081--1101, 2006.
+
 \end{thebibliography}
