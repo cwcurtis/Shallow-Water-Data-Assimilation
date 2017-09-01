@@ -3,7 +3,7 @@ function [fin_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,N
 KT = 2*K;
 ep = .1;
 mu = sqrt(ep);
-Mval = 14;
+Mval = 1;
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
@@ -65,7 +65,7 @@ end
 
 params(5) = Mval;
 msqerror = zeros(nsamp);
-msqerror(1) = norm(interpft(etames,KT) - eta0)/norm(eta0);
+msqerror(1) = sqrt(Llx/K)*norm(interpft(etames,KT) - eta0);
 tvals = zeros(nsamp);
 
 for jj = 2:nsamp
@@ -75,7 +75,7 @@ for jj = 2:nsamp
     
     xa = analysis_step(K,Nens,xf,dmat,cormat);
     xapprox = sum(xa(1:KT,:),2)/Nens;
-    msqerror(jj) = norm(xapprox-surf_dat(:,jj))/norm(surf_dat(:,jj));
+    msqerror(jj) = sqrt(Llx/K)*norm(xapprox-surf_dat(:,jj));
     tvals(jj) = dt*jj*nindt;
     
     if jj<nsamp

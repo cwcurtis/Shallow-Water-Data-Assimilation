@@ -87,7 +87,7 @@ end
 
 params(5) = Mval;
 msqerror = zeros(nsamp);
-msqerror(1) = norm(interpft(etames,KT) - eta0)/norm(eta0);
+msqerror(1) = sqrt(Llx/K)*norm(interpft(etames,KT) - eta0);
 
 tvals = zeros(nsamp);
 for jj = 2:nsamp
@@ -101,7 +101,7 @@ for jj = 2:nsamp
     nvec = [xapprox(1:K);0] + 1i*[0;xapprox(K+1:KT-1);0];
     etan = [nvec;conj(nvec(K:-1:2))];
     etan(Kc:Kuc) = 0;
-    msqerror(jj) = norm(real(ifft(etan))-surf_dat(:,jj))/norm(surf_dat(:,jj));
+    msqerror(jj) = sqrt(Llx/K)*norm(real(ifft(etan))-surf_dat(:,jj));
     tvals(jj) = dt*jj*nindt;
     
     if jj<nsamp

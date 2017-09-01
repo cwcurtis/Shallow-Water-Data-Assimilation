@@ -1,4 +1,77 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{jones1}
+L.~Kuznetsov, K.~Ide, and C.K.R.T. Jones.
+\newblock A method for assimilation of {L}agrangian data.
+\newblock {\em Mon. Wea. Rev.}, 131:2247--2260, 2003.
+
+\bibitem{jones2}
+H.~Salman, L.~Kuznetsov, and C.K.R.T. Jones.
+\newblock A method for assimilating {L}agrangian data into a
+  shallow-water-equation ocean model.
+\newblock {\em Mon. Wea. Rev.}, 134:1081--1101, 2006.
+
+\bibitem{apte}
+A.~Apte, C.K.R.T. Jones, and A.M. Stuart.
+\newblock A {B}ayesian approach to {L}agrangian data assimilation.
+\newblock {\em Tellus}, 60:336--347, 2008.
+
+\bibitem{spiller1}
+L.~Slivinski, E.~Spiller, A.~Apte, and B.~Sandstede.
+\newblock A hybrid particle-ensemble {K}alman filter for {L}agrangian data
+  assimilation.
+\newblock {\em Mon. Wea. Rev.}, 143:195--211, 2015.
+
+\bibitem{spiller2}
+E.T. Spiller, A.~Apte, and C.K.R.T. Jones.
+\newblock Assimiliating en-route {L}agrangian obersvations.
+\newblock {\em Tellus}, 65:20319, 2013.
+
+\bibitem{craig}
+W.~Craig and C.~Sulem.
+\newblock Numerical simulation of gravity waves.
+\newblock {\em J. Comput. Phys.}, 108:73--83, 1993.
+
+\bibitem{craig2}
+W.~Craig, P.~Guyenne, and H.~Kalisch.
+\newblock Hamiltonian long-wave expansions for free surfaces and interfaces.
+\newblock {\em Comm. Pure Appl. Math.}, 58:1587--1641, 2005.
+
+\bibitem{craig3}
+W.~Craig, P.~Guyenne, D.~Nicholls, and C.~Sulem.
+\newblock Hamiltonian long-wave expansions for water waves over a rough bottom.
+\newblock {\em Proc. R. Soc. A}, 461:839--873, 2005.
+
+\bibitem{craig4}
+W.~Craig, P.~Guyenne, and C.~Sulem.
+\newblock Water waves over a random bottom.
+\newblock {\em J. Fluid Mech.}, 640:79--107, 2009.
+
+\bibitem{craig5}
+W.~Craig and D.~Nicholls.
+\newblock Travelling two and three-dimensional capillary gravity water waves.
+\newblock {\em SIAM J. Math. Anal.}, 32:323--359, 2000.
+
+\bibitem{afm}
+M.J. Ablowitz, A.S. Fokas, and Z.H. Musslimani.
+\newblock On a new non-local formulation of water waves.
+\newblock {\em J. Fluid Mech.}, 562:313--343, 2006.
+
+\bibitem{oliverasvasan}
+K.L. Oliveras and V.~Vasan.
+\newblock A new equation describing travelling water waves.
+\newblock {\em J. Fluid Mech.}, 717:514--522, 2013.
+
+\bibitem{evensen}
+G.~Evensen.
+\newblock The ensemble {K}alman filter: theoretical formulation and practical
+  implementation.
+\newblock {\em Ocean Dynamics}, 53:343--367, 2003.
+
+\bibitem{kalnay}
+E.~Kalnay.
+\newblock {\em Atmospheric modeling, data assimilation, and predictability}.
+\newblock Cambridge University Press, Cambridge, 2003.
 
 \bibitem{yue}
 D.G. Dommermuth and D.K.P. Yue.
@@ -19,26 +92,5 @@ V.E. Zakharov.
   deep fluid.
 \newblock {\em Zhurnal Prikladnoi Mechaniki i Teckhnicheskoi Fiziki}, 8:86--94,
   1968.
-
-\bibitem{craig}
-W.~Craig and C.~Sulem.
-\newblock Numerical simulation of gravity waves.
-\newblock {\em J. Comput. Phys.}, 108:73--83, 1993.
-
-\bibitem{afm}
-M.J. Ablowitz, A.S. Fokas, and Z.H. Musslimani.
-\newblock On a new non-local formulation of water waves.
-\newblock {\em J. Fluid Mech.}, 562:313--343, 2006.
-
-\bibitem{jones1}
-L.~Kuznetsov, K.~Ide, and C.K.R.T. Jones.
-\newblock A method for assimilation of {L}agrangian data.
-\newblock {\em Mon. Wea. Rev.}, 131:2247--2260, 2003.
-
-\bibitem{jones2}
-H.~Salman, L.~Kuznetsov, and C.K.R.T. Jones.
-\newblock A method for assimilating {L}agrangian data into a
-  shallow-water-equation ocean model.
-\newblock {\em Mon. Wea. Rev.}, 134:1081--1101, 2006.
 
 \end{thebibliography}

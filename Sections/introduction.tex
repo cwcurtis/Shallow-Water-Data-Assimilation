@@ -1,5 +1,9 @@
 
-Throughout the remainder of this paper, we focus on solving the free boundary value problem 
+Given the recent surge in interest in data assimilation strategies in oceanography \cite{jones1,jones2,apte,spiller1,spiller2}, it is interesting then to ask how these approaches might be used to incoporate data into surface wave estimation.  While the inclusion of nonlinearity in surface-wave modeling was traditionally complicated due to the need to solve a nonlinear free-boundary value problem, through the work of \cite{craig,craig2,craig3,craig4,craig5,afm} and others, it is now quite feasable to compute fully nonlinear solutions to the surface-wave problem to high accuracy.  Likewise, given the recent work of \cite{oliverasvasan}, there is an increased interest in better understanding how to improve the assimilation of surface wave data into more complicated water-wave models.  
+
+Thus, in this paper, we explore the use of ensemble Kalman filters \cite{evensen} as a means of incorporating data into the modeling of free surface waves.  While not as sophisticated as more genearl Bayesian assimilation schemes, see \cite{apte,spiller2} for example, Kalman filters are a well understood and highly used means of data assimilation in oceanography \cite{evensen} and meterology \cite{kalnay}.  As we show, we can readily use ensemble Kalman filters to incorporate both Eularian measurements, corresponding to measurements made by buoys tethered to sea-floor pressure plates, and Lagrangian measurements, corresponding to unteathered, freely floating buoys.  
+
+Throughout the remainder of this paper, we use as a model for a freely evolving ocean surface the free boundary value problem 
 \begin{align*}
 \Delta \phi = 0, & ~~ -h < z < \eta(x,t) \\ 
 \phi_{z} = 0, & ~~ z=-h\\
