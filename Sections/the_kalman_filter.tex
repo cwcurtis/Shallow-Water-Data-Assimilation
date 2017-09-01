@@ -86,11 +86,15 @@ We therefore see that when comparing data to model forecasts, the observation op
 \[
 \tilde{H} =
 \bp 
-1/2 & \cos(\tilde{x}_{1})  & \cdots & \cos( (K-1) \tilde{x}_{1}) & \sin(\tilde{x}_{1}) & \cdots &  \sin( (K-1) \tilde{x}_{1}) \\  
-1/2 & \cos(\tilde{x}_{2})  & \cdots & \cos( (K-1) \tilde{x}_{2}) & \sin(\tilde{x}_{2}) & \cdots &  \sin( (K-1) \tilde{x}_{2}) \\
+1/2 & c_{1,1}  & \cdots & c_{1,(K-1)} & s_{1,1} & \cdots &  s_{1,(K-1)} \\  
+1/2 & c_{2,1}  & \cdots & c_{2,(K-1)} & s_{2,1} & \cdots &  s_{2,(K-1)} \\
 \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 
-1/2 & \cos(\tilde{x}_{N_{f}})  & \cdots & \cos( (K-1) \tilde{x}_{N_{f}}) & \sin(\tilde{x}_{N_{f}}) & \cdots &  \sin( (K-1) \tilde{x}_{N_{f}})
+1/2 & c_{N_{f},1}  & \cdots & c_{N_{f},(K-1)} & s_{N_{f},1} & \cdots &  s_{N_{f},(K-1)}
 \ep 
+\]
+where
+\[
+c_{j,l} = \cos(l\tilde{x}_{j}), ~ s_{j,l} = \sin(l\tilde{x}_{j})
 \]
 with $\tilde{x}_{j} = \pi x^{(p)}_{j}/L_{x}$.  Throughout the remainder of this section, we take the covariance matrices $Q_{n}$ and $R_{n}$ to be $\sigma^{2}I$, where $I$ denotes the identity matrix appropriate to the corresponding dimensionality of the random variable in question, and $\sigma$ corresponds to the variance of the associated Gaussian random variables.  
 
@@ -100,4 +104,17 @@ q_{x} = \phi_{x} + \epsilon \eta_{x}\phi_{z} = \dot{x} + \epsilon \eta_{x}\dot{z
 \]
 so this is something that would still only be determined up to a constant.  Perhaps since the buoy is tethered one can possibly estimate some of the relevant quantities, but suffice to say, it is not immediately clear how one would determine an initial estimate of this variable.  Thus, without any other information, we initialize the surface velocity potential with zero-mean, $\sigma$-variance Gaussian noise.  Thus, we effectively look at a wide range of flow fields, limited only by the requirements on the variance and mean.  Note, in order then to get meaningful results, this inidicates that we should let the number of ensembles $N_{e}\gg1$, which is already in accord with best practice.  
 
+\subsection*{Lagrangian Data Assimilation}
 
+While similar to the framework described above, following the framework advanced by \cite{jones1,jones2}, in order to incorporate sea height measurments provided by freely floating buoys, we augment the equations describing the free surface flow derived above by the differential equations describing particle paths at the free surface, which are given by 
+\[
+\frac{dx}{dt} = \frac{\epsilon\left(q_{x}-\epsilon\mu^{2}\eta_{x}\eta_{t}\right)}{1 + \epsilon^{2}\mu^{2}\eta_{x}^{2}}, ~ \frac{dz}{dt} = \frac{\epsilon\left(\eta_{t}+\epsilon \eta_{x} q_{x}\right)}{1 + \epsilon^{2}\mu^{2}\eta_{x}^{2}}. 
+\]
+If we then suppose that we have, at time $t=0$, $N_{f}$ buoys with initial positions say $(x^{(f)}_{j}(0),\epsilon \eta(x^{(f)}_{j}(0),0) + \epsilon_{j}^{(d)}(0)$, $j=1\cdots N_{f}$.  As before, we use an interpolation of this data as an initial condition for the filter.  In cotrast though to the Eularian framework, in which it is more natural to treat the ensemble forecast and analsyis ensembles in frequency space, the Lagrangian framework lends itself to having the forecast and analysis ensembles be given in physical space.  This greatly simplifies the observation operator which becomes 
+\[
+H = \bp 0_{2N_{f}\times 2K} ~I_{2N_{f}\times 2N_{f}} \ep,
+\]
+where, equivalent to the role of $K$ above, we think instead of sampling $\eta$ and $q$ at the points 
+\[
+x_{j} = -L_{x} + \frac{j}{K}L_{x}, ~ j=0,\cdots,2K-1.
+\]

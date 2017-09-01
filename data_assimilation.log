@@ -1,24 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  31 AUG 2017 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.6.23)  1 SEP 2017 10:33
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **data_assimilation.tex
-
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
-lation.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(./data_assimilation.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -32,42 +23,42 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/he
-ader.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(./Sections/header.tex
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -88,21 +79,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2004/08/06 v2.20
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
 \thm@bodyfont=\toks20
 \thm@headfont=\toks21
@@ -113,44 +104,44 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks24
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen114
 \captionmargin@=\dimen115
 \captionwidth=\dimen116
@@ -161,16 +152,15 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count100
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count101
 \c@subtable=\count102
 )
 \c@thm=\count103
 \c@lem=\count104
 )
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
-lation.aux"
+(./data_assimilation.aux
 
 LaTeX Warning: Label `fig:Mval_1' multiply defined.
 
@@ -178,6 +168,8 @@ LaTeX Warning: Label `fig:Mval_1' multiply defined.
 LaTeX Warning: Label `fig:Mval_1' multiply defined.
 
 )
+\openout1 = `data_assimilation.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -190,7 +182,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count105
 \scratchdimen=\dimen121
@@ -203,194 +195,219 @@ LaTeX Font Info:    ... okay on input line 7.
 \MPnumerator=\count109
 \makeMPintoPDFobject=\count110
 \everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for U+msa on input line 8.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: No \author given.
 
+(./Sections/introduction.tex [1
 
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/in
-troduction.tex" [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/af
-m_dno_method.tex" [2])
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/th
-e_kalman_filter.tex" [3] [4] [5]
-Overfull \hbox (27.75818pt too wide) detected at line 94
-[] \OT1/cmr/m/n/10.95 = []
- []
-
-[6])
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\Sections/as
-similation.tex" [7]
-<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=38, 1445.4pt x 691.58376
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./Sections/afm_dno_metho
+d.tex [2]) (./Sections/the_kalman_filter.tex
+[3] [4] [5] [6]) (./Sections/assimilation.tex [7]
+<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=39, 1445.4pt x 691.58376
 pt>
 File: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type pdf)
 
  <use Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
 Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf used
- on input line 15.
+ on input line 17.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 
-<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=39, 1445.4pt x 655.
+<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=40, 1445.4pt x 655.
 44875pt>
 File: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type
  pdf)
  <use Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
 Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf
- used on input line 17.
+ used on input line 19.
 (pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
 
-<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=40, 1445.4pt x 691.583
+<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=41, 1445.4pt x 691.583
 76pt>
 File: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type pd
 f)
  <use Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
 Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf us
-ed on input line 19.
+ed on input line 21.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 
-<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=41, 1445.4pt x 691.5837
+<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=42, 1445.4pt x 691.5837
 6pt>
 File: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (type pdf
 )
  <use Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
 Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf use
-d on input line 30.
+d on input line 32.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 
-<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=42, 1445.4pt x 655
+<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=43, 1445.4pt x 655
 .44875pt>
 File: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (typ
 e pdf)
  <use Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
 Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pd
-f used on input line 32.
+f used on input line 34.
 (pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
 
-<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=43, 1445.4pt x 691.58
+<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=44, 1445.4pt x 691.58
 376pt>
 File: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (type p
 df)
  <use Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
 Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf u
-sed on input line 34.
+sed on input line 36.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
-
-<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=44, 1445.4pt x 655.44875p
-t>
+ [8] [9 <./Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <./Images/histogr
+am_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <./Images/rmserr_tf_20_sig_pt1_4_vs8p
+plates_Mval_1.pdf>]
+<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=109, 1445.4pt x 655.44875
+pt>
 File: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf Graphic file (type pdf)
  <use Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf>
 Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf used 
-on input line 54.
+on input line 51.
 (pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
 
-<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf, id=45, 1445.4pt x 655.
-44875pt>
+<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf, id=110, 1445.4pt x 655
+.44875pt>
 File: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf Graphic file (type
  pdf)
  <use Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf>
 Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf
- used on input line 56.
+ used on input line 53.
 (pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
 
-<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=46, 1445.4pt x 691.5837
-6pt>
+<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=111, 1445.4pt x 691.583
+76pt>
 File: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf Graphic file (type pdf
 )
  <use Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf>
 Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf use
-d on input line 58.
+d on input line 55.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 
-<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=47, 1445.4pt x 691.58376
-pt>
+<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=112, 1445.4pt x 691.5837
+6pt>
 File: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf Graphic file (type pdf)
 
  <use Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>
 Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf used
- on input line 68.
+ on input line 65.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 
-<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf, id=48, 1445.4pt x 655
-.44875pt>
+<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf, id=113, 1445.4pt x 65
+5.44875pt>
 File: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf Graphic file (typ
 e pdf)
  <use Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf>
 Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pd
-f used on input line 70.
+f used on input line 67.
 (pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
 
-<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=49, 1445.4pt x 691.583
-76pt>
+<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=114, 1445.4pt x 691.58
+376pt>
 File: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf Graphic file (type pd
 f)
  <use Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>
 Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf us
-ed on input line 72.
+ed on input line 69.
 (pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
 )
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
-lation.bbl" [8] [9 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git
--Clone/Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <D:/My Documents/Desk
-top/Shallow-Water-Data-Assimilation-Git-Clone/Images/histogram_tf_20_sig_pt1_4_
-vs8pplates_Mval_1.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation
--Git-Clone/Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>] [10 <D:/My Doc
-uments/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/wave_tf_20_sig_
-pt1_4_vs8pplates_Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assim
-ilation-Git-Clone/Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf> <D:/
-My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/rmserr_tf
-_20_sig_pt1_4_vs8pplates_Mval_14.pdf>] [11 <D:/My Documents/Desktop/Shallow-Wat
-er-Data-Assimilation-Git-Clone/Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf
-> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/Images/his
-togram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf> <D:/My Documents/Desktop/Shallow-
-Water-Data-Assimilation-Git-Clone/Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_
-1.pdf>] [12 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/
-Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf> <D:/My Documents/Desktop/Sha
-llow-Water-Data-Assimilation-Git-Clone/Images/histogram_tf_20_sig_pt1_4_vs_8flo
-ats_Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-C
-lone/Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>]) [13]
-("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\data_assimi
-lation.aux")
+(./data_assimilation.bbl) [10] [11 <./Images/wave_tf_20_sig_pt1_4_vs8pplates_Mv
+al_14.pdf> <./Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf> <./Image
+s/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>] [12 <./Images/wave_tf_20_sig_
+pt1_4_vs8floats_Mval_1.pdf> <./Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval
+_1.pdf> <./Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf>] [13 <./Images/w
+ave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf> <./Images/histogram_tf_20_sig_pt1_4_
+vs_8floats_Mval_14.pdf> <./Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>
+] (./data_assimilation.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3315 strings out of 493921
- 50310 string characters out of 3147276
- 111362 words of memory out of 3000000
- 6567 multiletter control sequences out of 15000+200000
- 12319 words of font info for 46 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 38i,12n,38p,1292b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data_assimilation.pdf (13 pages, 309610 bytes).
+ 3695 strings out of 494946
+ 56108 string characters out of 6181040
+ 115152 words of memory out of 5000000
+ 6916 multiletter control sequences out of 15000+600000
+ 12319 words of font info for 46 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,12n,39p,1144b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on data_assimilation.pdf (13 pages, 264380 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
