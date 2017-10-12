@@ -3,10 +3,17 @@ function data_plotter(K,Llx,tf,dt,dts,Nens,sig,Nplates)
 KT = 2*K;
 
 Xfloats = linspace(-Llx,Llx,Nplates/2)';
-[fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats);
+Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
+k0 = 1;
+rvec = exp(-(Kmesh-k0).^2/(2*sig));
+rvec(1) = 0;
+avals = sqrt(KT)*(abs(rvec)/norm(rvec)).*exp(1i*randn(KT,1));
+bvals = sqrt(KT)*(abs(rvec)/norm(rvec)).*exp(1i*randn(KT,1));
+
+[fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 
 Xfloats = linspace(-Llx,Llx,Nplates)';
-[fin_dat_tfloat,tvals,msqerror_tfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats);
+[fin_dat_tfloat,tvals,msqerror_tfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 
 approx_sf = fin_dat_sfloat(1:KT);
 exact_sol = fin_dat_sfloat(KT+1:2*KT);
@@ -39,12 +46,24 @@ end
 sf_dist = sf_dist/sum(sf_dist);
 tf_dist = tf_dist/sum(tf_dist);
 
+app_sf_freq = fft(approx_sf);
+app_tf_freq = fft(approx_tf);
+exact_freq = fft(exact_sol);
+
+app_sf_ps = log10(abs(fftshift(app_sf_freq.*conj(app_sf_freq)))/KT);
+app_tf_ps = log10(abs(fftshift(app_tf_freq.*conj(app_sf_freq)))/KT);
+exact_ps = log10(abs(fftshift(exact_freq.*conj(app_sf_freq)))/KT);
+Kvals = -K+1:K;
+
 figure(1)
 plot(Xvals,approx_sf,'k--',Xvals,approx_tf,'k-',Xvals,exact_sol,'b','LineWidth',2)
+%plot(Kvals,app_sf_ps,'k--',Kvals,app_tf_ps,'k-',Kvals,exact_ps,'b','LineWidth',2)
 h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
 xlabel('$x$','Interpreter','LaTeX','FontSize',30)
+%xlabel('$k$','Interpreter','LaTeX','FontSize',30)
 legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$','$\eta(x,t_{f})$'},'Interpreter','LaTeX')
+%legend({'$\eta_{4p}(k,t_{f})$','$\eta_{8p}(k,t_{f})$','$\eta(k,t_{f})$'},'Interpreter','LaTeX')
 
 figure(2)
 plot(eraxis,sf_dist,'k--',eraxis,tf_dist,'k-','LineWidth',2)
