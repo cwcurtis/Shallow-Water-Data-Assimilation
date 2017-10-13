@@ -76,11 +76,11 @@ Averages and approximate error covariance matrices are computed as above, and th
 \subsection*{Eularian Data Assimilation}
 In contrast to the Lagrangian approach, we focus on using Eularian measurements as the source of the data used in the Kalman filter.  Given that most wave height measurements are obtained via pressure plates, which corresponds to an Eularian measurement, this makes an Eularian data assimilation approach more natural than a Lagrangian one.  To do this, we suppose that we have at some set of fixed locations, say $x^{(p)}_{j}$, $j=1\cdots N_{f}$, pressure plates over which we obtain surface height measurements $\eta(x^{(p)}_{j},t)+\epsilon^{(d)}_{j}(t)$.  We likewise, using standard pseudo-spectral methods for solving the water-wave problem, have at any given time a numerically computed approximation to the surface, say $\tilde{\eta}(x,t)$, where 
 \[
-\tilde{\eta}(x,t) = -\frac{1}{2K}\sum_{j=-K+1}^{K}\hat{\eta}_{j}e^{i\pi jx/L_{x}}, ~ x \in [-L_{x},L_{x}].
+\tilde{\eta}(x,t) = \frac{1}{2K}\sum_{j=-K+1}^{K}(-1)^{j}\hat{\eta}_{j}e^{i\pi jx/L_{x}}, ~ x \in [-L_{x},L_{x}].
 \]
 Note, the scaling and sign choice are commensurate with the standard implementation of the Fast Fourier Transform in Matlab, NumPy, and so forth.  Given the requirement that $\tilde{\eta}(x,t)$ is real, we have the symmetry constraint $\hat{\eta}_{-j} = \hat{\eta}^{\ast}_{j}$.  For ease then, we set $\hat{\eta}_{K}=0$, and note that the above representation for $\tilde{\eta}(x,t)$ can be rewritten as 
 \[
-\tilde{\eta}(x,t) = -\frac{1}{2K}\left(\hat{\eta}_{0} + 2\sum_{j=1}^{K-1} \left( \mbox{Re}(\hat{\eta}_{j})\cos\left(\frac{\pi j x}{L_{x}}\right) -  \mbox{Im}(\hat{\eta}_{j})\sin\left(\frac{\pi j x}{L_{x}}\right)\right) \right), 
+\tilde{\eta}(x,t) = \frac{1}{2K}\left(\hat{\eta}_{0} + 2\sum_{j=1}^{K-1} (-1)^{j}\left( \mbox{Re}(\hat{\eta}_{j})\cos\left(\frac{\pi j x}{L_{x}}\right) -  \mbox{Im}(\hat{\eta}_{j})\sin\left(\frac{\pi j x}{L_{x}}\right)\right) \right), 
 \]
 We therefore see that when comparing data to model forecasts, the observation operator $H=-\tilde{H}/K$, where $\tilde{H}$ is given by the Vandermonde like matrix
 \[
@@ -94,7 +94,7 @@ We therefore see that when comparing data to model forecasts, the observation op
 \]
 where
 \[
-c_{j,l} = \cos(l\tilde{x}_{j}), ~ s_{j,l} = \sin(l\tilde{x}_{j})
+c_{j,l} = (-1)^{l}\cos(l\tilde{x}_{j}), ~ s_{j,l} = (-1)^{l}\sin(l\tilde{x}_{j})
 \]
 with $\tilde{x}_{j} = \pi x^{(p)}_{j}/L_{x}$.  Throughout the remainder of this section, we take the covariance matrices $Q_{n}$ and $R_{n}$ to be $\sigma^{2}I$, where $I$ denotes the identity matrix appropriate to the corresponding dimensionality of the random variable in question, and $\sigma$ corresponds to the variance of the associated Gaussian random variables.  
 

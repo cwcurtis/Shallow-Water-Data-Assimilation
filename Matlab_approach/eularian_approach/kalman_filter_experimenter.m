@@ -1,4 +1,4 @@
-function [fin_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals)
+function [path_dat,surf_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals)
 
 KT = 2*K;
 Kc = floor(KT/3);
@@ -7,7 +7,7 @@ Kc = Kc + 1;
     
 ep = .1;
 mu = sqrt(ep);
-Mval = 1;
+Mval = 2;
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
@@ -82,8 +82,9 @@ end
 % First, use what interpolatory data we have.   
 etamesno = zeros(length(Xfloats),1);
 for jj=1:length(Xfloats)
-   etamesno(jj) =  1/KT*sum(avals.*exp(1i*Kmesh*Xfloats(jj)));
+   etamesno(jj) =  -1/KT*real(sum(avals.*exp(1i*Kmesh*Xfloats(jj))));
 end
+
 etames = etamesno + sig*randn(length(Xfloats),1);
 params(5) = Mval;
 msqerror = zeros(nsamp);
