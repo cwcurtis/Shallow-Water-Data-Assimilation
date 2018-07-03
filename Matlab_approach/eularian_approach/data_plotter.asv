@@ -9,15 +9,11 @@ width = 1e-2;
 rvec = exp(-(Kmesh-k0).^2/(2*sqrt(width)));
 rvec(1) = 0;
 avals = sqrt(KT)*rvec/norm(rvec,1).*exp(2*pi*1i*rand(KT,1));
-bvals = sqrt(KT)*rvec/norm(rvec,1).*exp(2*pi*1i*rand(KT,1));
+bvals = sqrt(KT)*rvec/norm(rvec).*exp(2*pi*1i*rand(KT,1));
 
 n0 = real(ifft(avals));
 n0 = n0/max(abs(n0));
 avals = fft(n0);
-
-q0 = real(ifft(bvals));
-q0 = q0/max(abs(q0));
-bvals = fft(q0);
 
 [fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 

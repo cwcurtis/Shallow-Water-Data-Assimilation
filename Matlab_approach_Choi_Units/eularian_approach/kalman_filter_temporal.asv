@@ -12,6 +12,9 @@ Mval = 2;
 Xmesh = -Llx:dx:Llx-dx;
 
 params = [K ep mu Llx Mval dt dts Nens sig];
+mask = ones(KT,1);
+mask(2:2:K) = -1;
+mask(K+2:KT) = flipud(mask(2:K));
 
 Ndat = length(Xfloats);
 nindt = round(dts/dt);
@@ -23,6 +26,7 @@ evec = exp(1i*pi*Xfloats/Llx);
 for jj=2:K   
     Hmat(:,jj) = Hmat(:,jj-1).*evec;
 end
+%Hmat(:,2:K) = repmat(mask(2:K)',Ndat,1).*Hmat(:,2:K);
 tmat = -2*imag(Hmat(:,2:K));
 Hmat(:,2:K) = 2*real(Hmat(:,2:K));
 Hmat(:,K+1:KT-1) = tmat;
@@ -47,7 +51,7 @@ bsub = rvec.*exp(2*pi*1i*rand(K+1,1));
 bvals = [bsub;conj(bsub(K:-1:2))];
 bvals = sqrt(KT)*bvals/norm(bvals);
 
-eta0 = real(ifft(avals));
+%eta0 = real(ifft(avals));
 q0 = real(ifft(bvals));
 etaf = avals;
 un = [real(etaf(1:K));imag(etaf(2:K));q0];
@@ -71,8 +75,17 @@ tvals = zeros(1,nsamp);
 % Build initial ensemble of forecasts
 % First, use what interpolatory data we have.   
 
-freqn = [avals(K+2:KT);avals(1:K+1)];
-etamesno = (1/KT)*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*(Xfloats+Llx)*Kvals),2));
+freqn = ifftshift(avals);
+etamesno = (1/KT)*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*Xfloats*Kvals),2));
+
+%eta0 = (1/KT)*real(sum(repmat(freqn.',KT,1).*exp(1i*pi/Llx*(Xmesh+Llx)'*Kvals),2));
+eta0a = real(ifft(avals));
+eta0 = zeros(KT,1);
+for jj=1:KT
+eta0(jj) = (1/KT)*real(sum( freqn.*exp(2*1i*(jjpi/KT*Kvals') ));
+end
+plot(Xmesh,eta0a,'--',Xmesh,eta0,'-')
+pause
 
 scfac = max(abs(etamesno));
 etames = etamesno + sig*scfac*randn(Ndat,1);
@@ -91,8 +104,8 @@ for kk=1:nmax-1
     nvec = [un(1:K);0] + 1i*[0;un(K+1:KT-1);0];
     etan = [nvec;conj(nvec(K:-1:2))];    
     if mod(kk,nindt) == 0
-       freqn = [etan(K+2:KT);etan(1:K+1)];
-       tmpval = 1/KT*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*(Xfloats+Llx)*Kvals),2));
+       freqn = ifftshift(etan);
+       tmpval = 1/KT*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*Xfloats*Kvals),2));
        surf_dat(:,dcnt) = tmpval;
        path_dat(:,dcnt) = tmpval + scfac*sig*randn(Ndat,1);
        tvals(dcnt) = dt*(dcnt-1)*nindt;
@@ -100,23 +113,18 @@ for kk=1:nmax-1
     end    
 end
 
-%etaemp = fft(interpft(etames,KT));
-etamesfreq = cos_tran_initial_condition(K,Llx,mu,tvals,path_dat(1,:)');
-etames = real(ifft(etamesfreq));
-figure(1)
-plot(Xmesh,log10(abs(fftshift(sqrt(KT)*fft(eta0)))),'--',Xmesh,log10(abs(fftshift(etamesfreq))),'-')
-pause
-
+etaemp = fft(interpft(etames,KT));
 etamesnxt = path_dat(:,2);
 etaempnxt = fft(interpft(etamesnxt,KT));
 q0freq = (etaempnxt - cos(dts*drel).*etaemp)./(drel.*sin(dts*drel));
 q0freq(1) = 0;
 q0emp = real(ifft(q0freq));
 
-%xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0emp],1,Nens);
-xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0],1,Nens);
-figure(2)
-plot(Xmesh,q0,'--',Xmesh,q0emp,'-')
+%plot(Xmesh,q0,'--',Xmesh,q0emp,'-')
+plot(Xmesh,eta0,'--',Xmesh,interpft(etamesno,KT),'-')
+pause
+xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0emp],1,Nens);
+
 params(5) = Mval;
 
 for jj = 2:nsamp
@@ -130,8 +138,8 @@ for jj = 2:nsamp
     nvec = [napprox(1:K);0] + 1i*[0;napprox(K+1:KT-1);0];
     etan = [nvec;conj(nvec(K:-1:2))];
     etan(Kc:Kuc) = 0;
-    freqn = [etan(K+2:KT);etan(1:K+1)];
-    smth_dat(:,jj) = 1/KT*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*(Xfloats+Llx)*Kvals),2));
+    freqn = ifftshift(etan);
+    smth_dat(:,jj) = 1/KT*real(sum(repmat(freqn.',Ndat,1).*exp(1i*pi/Llx*Xfloats*Kvals),2));
             
     msqerror(jj) = sqrt(Llx/K)*norm(smth_dat(:,jj)-surf_dat(:,jj));
     

@@ -1,8 +1,7 @@
 function data_plotter_temporal(K,Llx,tf,dt,dts,Nens,sig,Nplates)
 
 dx = Llx/K;
-%Xfloats = linspace(-Llx,Llx-dx,Nplates)';
-Xfloats = 0;
+Xfloats = linspace(-Llx,Llx-dx,Nplates)';
 
 [smth_dat,path_dat,surf_dat,tvals,msqerror_sfloat] = kalman_filter_temporal(K,Llx,tf,dt,dts,Nens,sig,Xfloats);
 

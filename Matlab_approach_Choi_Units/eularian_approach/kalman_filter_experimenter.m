@@ -1,4 +1,4 @@
-function [fin_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals)
+function [path_dat,surf_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals)
 
 KT = 2*K;
 Kc = floor(KT/3);
@@ -7,16 +7,13 @@ Kc = Kc + 1;
     
 ep = .1;
 mu = sqrt(ep);
-Mval = 14;
+Mval = 2;
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
 nindt = round(dts/dt);
 nmax = round(tf/dt);
 nsamp = round(nmax/nindt);
-mask = ones(KT,1);
-mask(2:2:K) = -1;
-mask(K+2:2:KT) = -1;
 
 Hmat = ones(Ndat,KT-1);
 evec = exp(1i*pi*Xfloats/Llx);
@@ -30,11 +27,17 @@ Hmat(:,2:K) = 2*real(Hmat(:,2:K));
 Hmat(:,K+1:KT-1) = tmat;
 Hmat = -1/KT*Hmat;
 
+%Xmesh = linspace(-Llx,Llx,KT+1);
+%Xmesh = Xmesh(1:KT)';
+
 Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
 mDk = mu*Kmesh;
 tnh = tanh(mDk);
 L1 = Kmesh.*tnh/mu;
 drel = sqrt(L1);
+
+%eta0 = cos(pi*Xmesh/Llx);
+%q0 = sin(pi*Xmesh/Llx);
 
 eta0 = real(ifft(avals));
 q0 = real(ifft(bvals));
@@ -66,7 +69,7 @@ for kk=1:nmax
     
     if mod(kk,nindt) == 0
        for jj=1:Ndat
-           path_dat(jj,dcnt) = 1/KT*real(sum(mask.*etan.*exp(1i*Kmesh*Xfloats(jj)))) +  sig*randn(1);
+           path_dat(jj,dcnt) = -1/KT*real(sum(etan.*exp(1i*Kmesh*Xfloats(jj)))) +  sig*randn(1);
        end
         
        surf_dat(:,dcnt) = real(ifft(etan));
@@ -79,7 +82,7 @@ end
 % First, use what interpolatory data we have.   
 etamesno = zeros(length(Xfloats),1);
 for jj=1:length(Xfloats)
-   etamesno(jj) =  1/KT*real(sum(mask.*avals.*exp(1i*Kmesh*Xfloats(jj))));
+   etamesno(jj) =  -1/KT*real(sum(avals.*exp(1i*Kmesh*Xfloats(jj))));
 end
 
 etames = etamesno + sig*randn(length(Xfloats),1);
@@ -89,11 +92,13 @@ msqerror(1) = sqrt(Llx/K)*norm(interpft(etames,KT) - eta0);
 
 path_dat(:,1) = etames;
 surf_dat(:,1) = eta0;
+etamesnxt = path_dat(:,2);
 
 etaemp = fft(interpft(etames,KT));
-q0freq = zeros(KT,1);
+etaempnxt = fft(interpft(etamesnxt,KT));
+q0freq = (etaempnxt - cos(dts*drel).*etaemp)./sin(dts*drel);
+q0freq(1) = 0;
 q0emp = real(ifft(q0freq));
-
 %Xmesh = linspace(-Llx,Llx,KT);
 %plot(Xmesh,q0emp,'-',Xmesh,q0,'--')
 %pause
@@ -103,6 +108,7 @@ if ccnt>rcnt
 end
 
 xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0emp],1,Nens);
+
 
 tvals = zeros(nsamp);
 for jj = 2:nsamp

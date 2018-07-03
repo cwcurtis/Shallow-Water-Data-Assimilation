@@ -5,19 +5,10 @@ KT = 2*K;
 Xfloats = linspace(-Llx,Llx,Nplates/2)';
 Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
 k0 = pi/Llx;
-width = 1e-2;
-rvec = exp(-(Kmesh-k0).^2/(2*sqrt(width)));
+rvec = exp(-(Kmesh-k0).^2/(2*sqrt(sig)));
 rvec(1) = 0;
-avals = sqrt(KT)*rvec/norm(rvec,1).*exp(2*pi*1i*rand(KT,1));
-bvals = sqrt(KT)*rvec/norm(rvec,1).*exp(2*pi*1i*rand(KT,1));
-
-n0 = real(ifft(avals));
-n0 = n0/max(abs(n0));
-avals = fft(n0);
-
-q0 = real(ifft(bvals));
-q0 = q0/max(abs(q0));
-bvals = fft(q0);
+avals = sqrt(KT)*(abs(rvec)/norm(rvec)).*exp(1i*randn(KT,1));
+bvals = sqrt(KT)*(abs(rvec)/norm(rvec)).*exp(1i*randn(KT,1));
 
 [fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 
@@ -65,14 +56,14 @@ exact_ps = log10(abs(fftshift(exact_freq.*conj(app_sf_freq)))/KT);
 Kvals = -K+1:K;
 
 figure(1)
-plot(Xvals,approx_sf,'k--',Xvals,approx_tf,'k-',Xvals,exact_sol,'b','LineWidth',2)
-%plot(Kvals,app_sf_ps,'k--',Kvals,app_tf_ps,'k-',Kvals,exact_ps,'b','LineWidth',2)
+%plot(Xvals,approx_sf,'k--',Xvals,approx_tf,'k-',Xvals,exact_sol,'b','LineWidth',2)
+plot(Kvals,app_sf_ps,'k--',Kvals,app_tf_ps,'k-',Kvals,exact_ps,'b','LineWidth',2)
 h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
-xlabel('$x$','Interpreter','LaTeX','FontSize',30)
-%xlabel('$k$','Interpreter','LaTeX','FontSize',30)
-legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$','$\eta(x,t_{f})$'},'Interpreter','LaTeX')
-%legend({'$\eta_{4p}(k,t_{f})$','$\eta_{8p}(k,t_{f})$','$\eta(k,t_{f})$'},'Interpreter','LaTeX')
+%xlabel('$x$','Interpreter','LaTeX','FontSize',30)
+xlabel('$k$','Interpreter','LaTeX','FontSize',30)
+%legend({'$\eta_{4p}(x,t_{f})$','$\eta_{8p}(x,t_{f})$','$\eta(x,t_{f})$'},'Interpreter','LaTeX')
+legend({'$\eta_{4p}(k,t_{f})$','$\eta_{8p}(k,t_{f})$','$\eta(k,t_{f})$'},'Interpreter','LaTeX')
 
 figure(2)
 plot(eraxis,sf_dist,'k--',eraxis,tf_dist,'k-','LineWidth',2)

@@ -1,0 +1,40 @@
+The AFM/DNO method begins from an observation first made in \cite{zakharov} that one can readily show that 
+\[
+\eta_{t} = \phi_{z} - \eta_{x}\phi_{x} = \sqrt{1+\epsilon^{2}\mu^{2}\eta_{x}^{2}}\p_{\hat{{\bf n}}} \phi,
+\]
+where $\p_{\hat{{\bf n}}} \phi$ denotes the normal derivative of the velocity potential at the surface $z=\epsilon\eta(x,t)$.  Then, following \cite{zakharov}, we can define a Dirichlet-to-Neumann operator (DNO), say $G(\eta)$, whereby we can write 
+\[
+\sqrt{1+\epsilon^{2}\mu^{2}\eta_{x}^{2}}\p_{\hat{{\bf n}}} \phi = G(\eta)q.
+\]
+We can then derive the closed system of evolution equations for $\eta$ and $q$ of the form 
+\begin{align}
+\eta_{t} = & G(\eta)q \\ 
+q_{t} = & -\eta -\frac{\epsilon}{2}q_{x}^{2} + \frac{\epsilon\mu^{2}}{2}\frac{\left(G(\eta)q + \epsilon \eta_{x}q_{x}\right)^{2}}{1+\epsilon^{2}\mu^{2}\eta_{x}^{2}}
+\end{align}
+
+Of course, to make this approach useful, one must determine a computable form of the DNO.  To do so, following arugments in \cite{craig}, we use the fact that $G$ is an analytic function of $\eta$ so that 
+\[
+G(\eta)q = \sum_{j=0}^{M} \epsilon^{j}G_{j}(\eta)q + \mathcal{O}(\epsilon^{M+1}).
+\]
+While there are several ways to determine the terms in this expansion, we argue that using the AFM formulation of the free surface wave problem makes this process more straightforward than other approaches.  Following then the results in \cite{afm}, we derive the following integro-differential equation 
+\[
+\int_{-L}^{L}e^{-ikx}\left(\cosh(\mu \tilde{k} (1 + \epsilon\eta))\eta_{t} + \frac{iq_{x}}{\mu}\sinh(\mu \tilde{k} (1 + \epsilon\eta)) \right) dx = 0, ~ \tilde{k} = \frac{\pi k}{L}.
+\]
+Inserting the DNO expansion from above, expanding the hyperbolic trignometric terms, and then matching powers of $\epsilon$ provides the following recursive formulas for the coefficients of the DNO, where for $j\geq 1$,  
+\begin{equation}
+\widehat{\left(G_{j}q \right)}_{k} = -\sum_{m=0}^{j-1} \frac{(\mu\tilde{k})^{(j-m)}}{(j-m)!}L_{j-m} \left(\eta^{(j-m)}G_{m}q\right)^{\widehat{}}_{k} - \frac{i}{\mu}\tilde{k}^{j}L_{j+1} \left(\eta^{j}q_{x}\right)^{\widehat{}}_{k}, 
+\label{dnorecurs}
+\end{equation}
+with 
+\[
+\widehat{\left(G_{0}q \right)}_{k} = \frac{\tilde{k}}{\mu}\tanh(\mu\tilde{k})\hat{q}_{k}, 
+\]
+and 
+\[
+L_{j}(k) = \left\{
+\begin{array}{rl}
+1, & j~\mbox{even},\\
+\tanh(\mu\tilde{k}), & j~\mbox{odd}.
+\end{array}
+\right.
+\]

@@ -100,13 +100,7 @@ for kk=1:nmax-1
     end    
 end
 
-%etaemp = fft(interpft(etames,KT));
-etamesfreq = cos_tran_initial_condition(K,Llx,mu,tvals,path_dat(1,:)');
-etames = real(ifft(etamesfreq));
-figure(1)
-plot(Xmesh,log10(abs(fftshift(sqrt(KT)*fft(eta0)))),'--',Xmesh,log10(abs(fftshift(etamesfreq))),'-')
-pause
-
+etaemp = fft(interpft(etames,KT));
 etamesnxt = path_dat(:,2);
 etaempnxt = fft(interpft(etamesnxt,KT));
 q0freq = (etaempnxt - cos(dts*drel).*etaemp)./(drel.*sin(dts*drel));
@@ -115,8 +109,11 @@ q0emp = real(ifft(q0freq));
 
 %xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0emp],1,Nens);
 xf = repmat([real(etaemp(1:K));imag(etaemp(2:K));q0],1,Nens);
+figure(1)
+plot(Xmesh,eta0,'--',Xmesh,interpft(etames,KT),'-')
 figure(2)
 plot(Xmesh,q0,'--',Xmesh,q0emp,'-')
+pause
 params(5) = Mval;
 
 for jj = 2:nsamp
