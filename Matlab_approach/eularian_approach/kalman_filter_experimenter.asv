@@ -7,22 +7,19 @@ Kc = Kc + 1;
     
 ep = .1;
 mu = sqrt(ep);
-Mval = 3;  % number of terms in the DNO expansion
+Mval = 14;
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
 nindt = round(dts/dt);
 nmax = round(tf/dt);
 nsamp = round(nmax/nindt);
-
 mask = ones(KT,1);
 mask(2:2:K) = -1;
 mask(K+2:2:KT) = -1;
-
-smask = ones(1,K-1);
 smask(1:2:K-1)=-1;
-maskm = repmat(smask,Ndat,1);
 
+maskm = repmat(smask,Ndat,1);
 Hmat = ones(Ndat,KT-1);
 evec = exp(1i*pi*Xfloats/Llx);
 
@@ -110,7 +107,7 @@ etames = real(ifft([nvec;conj(nvec(K:-1:2))]));
 msqerror(1) = sqrt(Llx/K)*norm(etames - surf_dat(:,1));
 %path_dat(:,1) = etames;
 
-tvals = zeros(nsamp,1);
+tvals = zeros(nsamp);
 for jj = 2:nsamp
     rmat =  sig*randn(Ndat,Nens);
     dmat = repmat(path_dat(:,jj),1,Nens) + rmat;
