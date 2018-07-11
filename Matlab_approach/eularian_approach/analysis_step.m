@@ -5,8 +5,9 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     % Ndat - number of data values sampled 
     % dmat - data matrix at time t_k
     % sig - standard deviation of Gaussian distribution for errors
+    
     KT = 2*K;
-    xmean = sum(xf,2)/Nens;
+    xmean = mean(xf,2);
     xfluc = xf - repmat(xmean,1,Nens);
     
     xfH = Hmat*xfluc(1:KT-1,:);
