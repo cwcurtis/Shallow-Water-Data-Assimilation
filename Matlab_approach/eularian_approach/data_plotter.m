@@ -6,22 +6,14 @@ Xfloats = linspace(-Llx,Llx,Nplates/2)';
 Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
 k0 = pi/Llx;
 width = 1e-2;
-rvec = exp(-(Kmesh-k0).^2/(2*sqrt(width)));
+rvec = exp(-(Kmesh-k0).^2/(2*width));
 rvec(1) = 0;
 
 pveca = exp(2*pi*1i*rand(K-1,1)); 
 pvecb = exp(2*pi*1i*rand(K-1,1));
 
-avals = sqrt(KT)*rvec/norm(rvec,1).*[0;pveca;0;conj(flipud(pveca))];
-bvals = sqrt(KT)*rvec/norm(rvec,1).*[0;pvecb;0;conj(flipud(pvecb))];
-
-%n0 = real(ifft(avals));
-%n0 = n0/max(abs(n0));
-%avals = fft(n0);
-
-%q0 = real(ifft(bvals));
-%q0 = q0/max(abs(q0));
-%bvals = fft(q0);
+avals = KT*rvec/norm(rvec,2).*[0;pveca;0;conj(flipud(pveca))];
+bvals = KT*rvec/norm(rvec,2).*[0;pvecb;0;conj(flipud(pvecb))];
 
 [fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 
@@ -100,4 +92,4 @@ ylabel('$\left|\left|\eta_{tr}(\cdot,t) - \bar{\eta}_{a}(\cdot,t)\right|\right|_
 legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p}(x,t)$']},'Interpreter','LaTeX')
 
 
-set(gcf,'position',   1e3*[0.303000000000000   0.282333333333333   1.550000000000000   0.948666666666667])
+%set(gcf,'position',   1e3*[0.303000000000000   0.282333333333333   1.550000000000000   0.948666666666667])

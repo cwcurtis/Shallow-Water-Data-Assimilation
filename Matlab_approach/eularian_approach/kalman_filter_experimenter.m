@@ -87,7 +87,7 @@ end
 
 k0 = pi/Llx;
 width = 1e-2;
-rvec = exp(-(Kmesh-k0).^2/(2*sqrt(width)));
+rvec = exp(-(Kmesh-k0).^2/(2*width));
 rvec(1) = 0;
 xf = zeros(2*K-1+KT,Nens);
 
@@ -95,14 +95,14 @@ parfor jj=1:Nens
     pveca = exp(2*pi*1i*rand(K-1,1)); 
     pvecb = exp(2*pi*1i*rand(K-1,1));
     
-    avals = sqrt(KT)*rvec/norm(rvec,1).*[0;pveca;0;conj(flipud(pveca))];
-    bvals = sqrt(KT)*rvec/norm(rvec,1).*[0;pvecb;0;conj(flipud(pvecb))];
+    avals = KT*rvec/norm(rvec,2).*[0;pveca;0;conj(flipud(pveca))];
+    bvals = KT*rvec/norm(rvec,2).*[0;pvecb;0;conj(flipud(pvecb))];
     q0emp = real(ifft(bvals));
     xf(:,jj) = [real(avals(1:K));imag(avals(2:K));q0emp];
 end
 
 params(5) = Mval;
-msqerror = zeros(nsamp);
+msqerror = zeros(nsamp,1);
 nemp = mean(xf(1:KT-1,:),2);
 nvec = [nemp(1:K);0] + 1i*[0;nemp(K+1:KT-1);0];
 etames = real(ifft([nvec;conj(nvec(K:-1:2))]));
@@ -112,7 +112,7 @@ msqerror(1) = sqrt(Llx/K)*norm(etames - surf_dat(:,1));
 
 tvals = zeros(nsamp,1);
 for jj = 2:nsamp
-    rmat =  sig*randn(Ndat,Nens);
+    rmat =  10*sig*randn(Ndat,Nens);
     dmat = repmat(path_dat(:,jj),1,Nens) + rmat;
     cormat = zeros(Ndat);
     parfor ll=1:Nens
