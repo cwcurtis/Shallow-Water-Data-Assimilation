@@ -6,10 +6,15 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     % dmat - data matrix at time t_k
     % sig - standard deviation of Gaussian distribution for errors
     KT = 2*K;
-    xmean = sum(xf,2)/Nens;
+    xmean = mean(xf,2);
     xfluc = xf - repmat(xmean,1,Nens);
-    
     xfH = Hmat*xfluc(1:KT-1,:);
-    mrhs = (xfH*xfH' + cormat)\(dmat-Hmat*xf(1:KT-1,:));
         
-    xf = xf +  xfluc*xfH'*mrhs;
+    Pf = xfluc*xfluc'/(Nens-1);
+    
+    disp(num2str(xfH*xfH'/(Nens-1) + cormat))
+    pause
+    
+    mrhs = (xfH*xfH'/(Nens-1) + cormat)\(dmat-Hmat*xf(1:KT-1,:));
+        
+    xf = xf +  Pf(:,1:KT-1)*Hmat'*mrhs;
