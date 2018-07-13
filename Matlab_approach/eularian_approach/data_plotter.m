@@ -5,6 +5,16 @@ KT = 2*K;
 Xfloats = linspace(-Llx,Llx,Nplates/2)';
 Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
 k0 = pi/Llx;
+<<<<<<< HEAD
+width = 1e-1;
+rvec = exp(-(Kmesh-k0).^2/(2*width^2));
+rvec(1) = 0;
+arand = rand(K-1,1);
+brand = rand(K-1,1);
+
+avals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;arand;0;conj(flipud(arand))]);
+bvals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;brand;0;conj(flipud(brand))]);
+=======
 width = 1e-2;
 rvec = exp(-(Kmesh-k0).^2/(2*width));
 rvec(1) = 0;
@@ -14,6 +24,7 @@ pvecb = exp(2*pi*1i*rand(K-1,1));
 
 avals = KT*rvec/norm(rvec,2).*[0;pveca;0;conj(flipud(pveca))];
 bvals = KT*rvec/norm(rvec,2).*[0;pvecb;0;conj(flipud(pvecb))];
+>>>>>>> a8ac9a9dbf6336bf7928d736553f4ca46d63c877
 
 [fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,Xfloats,avals,bvals);
 
@@ -65,6 +76,21 @@ Kvals = -K+1:K;
 plot_options = {'fontsize',16,'Interpreter','Latex'};
 subplot(3,1,1)
 plot(Xvals,approx_sf,'k--',Xvals,approx_tf,'k-',Xvals,exact_sol,'b','LineWidth',2)
+<<<<<<< HEAD
+h = set(gca,'FontSize',30);
+set(h,'Interpreter','LaTeX')
+xlabel('$x$','Interpreter','LaTeX','FontSize',30)
+legend({['$\eta_{',num2str(Nplates/2),'p}(x,t_{f})$'],['$\eta_{',num2str(Nplates),'p}(x,t_{f})$'],'$\eta(x,t_{f})$'},'Interpreter','LaTeX')
+
+figure(2)
+plot(Kvals,app_sf_ps,'k--',Kvals,app_tf_ps,'k-',Kvals,exact_ps,'b','LineWidth',2)
+h = set(gca,'FontSize',30);
+set(h,'Interpreter','LaTeX')
+xlabel('$k$','Interpreter','LaTeX','FontSize',30)
+legend({['$\eta_{',num2str(Nplates/2),'p}(k,t_{f})$'],['$\eta_{',num2str(Nplates),'p}(k,t_{f})$'],'$\eta(k,t_{f})$'},'Interpreter','LaTeX')
+
+figure(3)
+=======
 %plot(Kvals,app_sf_ps,'k--',Kvals,app_tf_ps,'k-',Kvals,exact_ps,'b','LineWidth',2)
 h = set(gca,'FontSize',18);
 set(h,'Interpreter','LaTeX')
@@ -74,9 +100,22 @@ legend({['$\eta_{',num2str(Nplates/2),'p}(x,t_{f})$'],['$\eta_{',num2str(Nplates
 %legend({'$\eta_{4p}(k,t_{f})$','$\eta_{8p}(k,t_{f})$','$\eta(k,t_{f})$'},'Interpreter','LaTeX')
 
 subplot(3,1,2)
+>>>>>>> a8ac9a9dbf6336bf7928d736553f4ca46d63c877
 plot(eraxis,sf_dist,'k--',eraxis,tf_dist,'k-','LineWidth',2)
 h = set(gca,'FontSize',18);
 set(h,'Interpreter','LaTeX')
+<<<<<<< HEAD
+xlabel('$\log_{10} \left|E_{a}\right|$','Interpreter','LaTeX','FontSize',30)
+legend({['$\eta_{',num2str(Nplates/2),'p}(x,t_{f})$'],['$\eta_{',num2str(Nplates),'p}(x,t_{f})$']},'Interpreter','LaTeX')
+
+figure(4)
+plot(tvals,msqerror_sfloat,'k--',tvals,msqerror_tfloat,'k-','LineWidth',2)
+h = set(gca,'FontSize',30);
+set(h,'Interpreter','LaTeX')
+xlabel('$T_{s}$','Interpreter','LaTeX','FontSize',30)
+ylabel('$\left|\left|\eta_{tr}(\cdot,t) - \bar{\eta}_{a}(\cdot,t)\right|\right|_{2}$','Interpreter','LaTeX','FontSize',30)
+legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p}(x,t)$']},'Interpreter','LaTeX')
+=======
 xlabel('$\log_{10} \left|E_{a}\right|$',plot_options{:})
 legend({['$\eta_{',num2str(Nplates/2),'p}(x,t_{f})$'],['$\eta_{',num2str(Nplates),'p}(x,t_{f})$']},'Interpreter','LaTeX')
 
@@ -93,3 +132,4 @@ legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p
 
 
 %set(gcf,'position',   1e3*[0.303000000000000   0.282333333333333   1.550000000000000   0.948666666666667])
+>>>>>>> a8ac9a9dbf6336bf7928d736553f4ca46d63c877

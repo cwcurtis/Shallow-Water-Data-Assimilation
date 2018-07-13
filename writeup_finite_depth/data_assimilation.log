@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  4 JUN 2018 16:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  12 JUL 2018 16:24
 entering extended mode
 **data_assimilation.tex
 
@@ -227,174 +227,38 @@ Overfull \hbox (6.75432pt too wide) detected at line 84
 /cmm/m/it/10.95 ;
  []
 
-[6] [7])
+[6])
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
-ite_depth\Sections/assimilation.tex" [8]
-<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=41, 1445.4pt x 691.58376
-pt>
-File: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type pdf)
-
- <use Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
-Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf used
- on input line 17.
-(pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
-
-<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=42, 1445.4pt x 655.
-44875pt>
-File: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type
- pdf)
- <use Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
-Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf
- used on input line 19.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf, id=43, 1445.4pt x 655.448
-75pt>
-File: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf Graphic file (type pd
-f)
- <use Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>
-Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf us
-ed on input line 21.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=44, 1445.4pt x 691.5837
-6pt>
-File: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (type pdf
-)
- <use Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
-Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf use
-d on input line 32.
-(pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
-
-<Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=45, 1445.4pt x 655
-.44875pt>
-File: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (typ
-e pdf)
- <use Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
-Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_14.pd
-f used on input line 34.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf, id=46, 1445.4pt x 720.69
-25pt>
-File: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf Graphic file (type p
-df)
- <use Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>
-Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf u
-sed on input line 36.
-(pdftex.def)             Requested size: 341.9989pt x 170.51743pt.
-
-
-LaTeX Warning: Float too large for page by 10.86809pt on input line 41.
-
-
-<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=47, 1445.4pt x 655.44875p
-t>
-File: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf Graphic file (type pdf)
- <use Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf>
-Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf used 
-on input line 53.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf, id=48, 1445.4pt x 655.
-44875pt>
-File: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf Graphic file (type
- pdf)
- <use Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf>
-Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf
- used on input line 55.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf, id=49, 1445.4pt x 720.6925
-pt>
-File: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf Graphic file (type pdf
-)
- <use Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf>
-Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf use
-d on input line 57.
-(pdftex.def)             Requested size: 341.9989pt x 170.51743pt.
-
-
-LaTeX Warning: Float too large for page by 2.31847pt on input line 62.
-
-
-<Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=50, 1445.4pt x 691.58376
-pt>
-File: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf Graphic file (type pdf)
-
- <use Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>
-Package pdftex.def Info: Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf used
- on input line 67.
-(pdftex.def)             Requested size: 341.9989pt x 163.63023pt.
-
-<Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf, id=51, 1445.4pt x 655
-.44875pt>
-File: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf Graphic file (typ
-e pdf)
- <use Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf>
-Package pdftex.def Info: Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pd
-f used on input line 69.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-
-<Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf, id=52, 1445.4pt x 655.448
-75pt>
-File: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf Graphic file (type pd
-f)
- <use Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>
-Package pdftex.def Info: Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf us
-ed on input line 71.
-(pdftex.def)             Requested size: 341.9989pt x 155.08061pt.
-) [9] [10 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/wr
-iteup_finite_depth/Images/wave_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <D:/My Do
-cuments/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/
-Images/histogram_tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf> <D:/My Documents/Deskto
-p/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/rmserr_
-tf_20_sig_pt1_4_vs8pplates_Mval_1.pdf>] [11 <D:/My Documents/Desktop/Shallow-Wa
-ter-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/wave_tf_20_sig_pt1_
-4_vs8pplates_Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilat
-ion-Git-Clone/writeup_finite_depth/Images/histogram_tf_20_sig_pt1_4_vs8pplates_
-Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone
-/writeup_finite_depth/Images/rmserr_tf_20_sig_pt1_4_vs8pplates_Mval_14.pdf>] [1
-2 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_fi
-nite_depth/Images/wave_tf_20_sig_pt1_4_vs8floats_Mval_1.pdf> <D:/My Documents/D
-esktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/hi
-stogram_tf_20_sig_pt1_4_vs_8floats_Mval_1.pdf> <D:/My Documents/Desktop/Shallow
--Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/rmserr_tf_20_sig
-_pt1_4_vs8floats_Mval_1.pdf>] [13 <D:/My Documents/Desktop/Shallow-Water-Data-A
-ssimilation-Git-Clone/writeup_finite_depth/Images/wave_tf_20_sig_pt1_4_vs8float
-s_Mval_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clo
-ne/writeup_finite_depth/Images/histogram_tf_20_sig_pt1_4_vs_8floats_Mval_14.pdf
-> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_fi
-nite_depth/Images/rmserr_tf_20_sig_pt1_4_vs8floats_Mval_14.pdf>]
+ite_depth\Sections/assimilation.tex" [7] [8]) [9]
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
-ite_depth\data_assimilation.bbl" [14]) [15]
+ite_depth\data_assimilation.bbl" [10]) [11]
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
 ite_depth\data_assimilation.aux") ) 
 Here is how much of TeX's memory you used:
- 3327 strings out of 493921
- 50859 string characters out of 3147276
- 110362 words of memory out of 3000000
- 6579 multiletter control sequences out of 15000+200000
+ 3257 strings out of 493921
+ 47488 string characters out of 3147276
+ 109362 words of memory out of 3000000
+ 6523 multiletter control sequences out of 15000+200000
  12319 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 38i,12n,38p,1145b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,38p,986b,205s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data_assimilation.pdf (15 pages, 329849 bytes).
+lic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on data_assimilation.pdf (11 pages, 207841 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
