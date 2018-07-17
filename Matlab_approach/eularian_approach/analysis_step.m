@@ -10,20 +10,6 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     xmean = mean(xf,2);
     xfluc = xf - repmat(xmean,1,Nens);
     xfH = Hmat*xfluc(1:KT-1,:);
-    [Pf1,~] = size(xfluc);
-    [HPf1,~] = size(xfH);
-    Pf = zeros(Pf1);
-    HPf = zeros(HPf1);
-    
-    parfor ll=1:Nens
-        tvec = xfluc(:,ll);
-        htvec = xfH(:,ll);
-        Pf = Pf + tvec*tvec';
-        HPf = HPf + htvec*htvec'; 
-    end
-    Pf = Pf/(Nens-1);
-    HPf = HPf/(Nens-1);
-    
-    mrhs = (HPf*HPf' + cormat)\(dmat-Hmat*xf(1:KT-1,:));
-        
+    Pf = xfluc*xfluc'/(Nens-1);
+    mrhs = (xfH*xfH'/(Nens-1) + cormat)\(dmat-Hmat*xf(1:KT-1,:));
     xf = xf +  Pf(:,1:KT-1)*Hmat'*mrhs;
