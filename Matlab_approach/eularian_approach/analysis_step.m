@@ -11,6 +11,7 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     xfluc = xf - repmat(xmean,1,Nens);
     xfH = Hmat*xfluc(1:KT-1,:);
 <<<<<<< HEAD
+<<<<<<< HEAD
         
     Pf = xfluc*xfluc'/(Nens-1);
     
@@ -37,4 +38,8 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     mrhs = (HPf*HPf' + cormat)\(dmat-Hmat*xf(1:KT-1,:));
         
 >>>>>>> a8ac9a9dbf6336bf7928d736553f4ca46d63c877
+=======
+    Pf = xfluc*xfluc'/(Nens-1);
+    mrhs = (xfH*xfH'/(Nens-1) + cormat)\(dmat-Hmat*xf(1:KT-1,:));
+>>>>>>> f50d11f1b2bbb41d06675a8a270c9dfb8122c1c1
     xf = xf +  Pf(:,1:KT-1)*Hmat'*mrhs;
