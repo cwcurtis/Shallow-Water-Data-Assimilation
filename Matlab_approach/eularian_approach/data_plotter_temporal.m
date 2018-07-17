@@ -1,8 +1,21 @@
 function data_plotter_temporal(K,Llx,tf,dt,dts,Nens,sig,Nplates)
 
 dx = Llx/K;
+<<<<<<< Updated upstream
 %Xfloats = linspace(-Llx,Llx-dx,Nplates)';
 Xfloats = 0;
+=======
+Xfloats = linspace(-Llx,Llx-dx,Nplates)';
+%Xfloats = .337*Llx;
+Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
+k0 = pi/Llx;
+rvec = exp(-(Kmesh(1:K+1)-k0).^2/(2*sqrt(sig)));
+rvec(1) = 0;
+rvec(K+1) = 0;
+asub = rvec.*exp(2*pi*1i*rand(K+1,1));
+avals = [asub;conj(asub(K:-1:2))];
+avals = sqrt(KT)*avals/norm(avals);
+>>>>>>> Stashed changes
 
 [smth_dat,path_dat,surf_dat,tvals,msqerror_sfloat] = kalman_filter_temporal(K,Llx,tf,dt,dts,Nens,sig,Xfloats);
 
