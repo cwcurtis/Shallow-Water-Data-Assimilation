@@ -9,11 +9,10 @@ k0 = pi/Llx;
 width = 1e-1;
 rvec = exp(-(Kmesh-k0).^2/(2*width^2));
 rvec(1) = 0;
-arand = rand(K-1,1);
-brand = rand(K-1,1);
-
-avals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;arand;0;conj(flipud(arand))]);
-bvals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;brand;0;conj(flipud(brand))]);
+arand = 2*pi*1i*rand(K-1,1);
+brand = 2*pi*1i*rand(K-1,1);
+avals = KT*rvec/norm(rvec,2).*exp([0;arand;0;conj(flipud(arand))]);
+bvals = KT*rvec/norm(rvec,2).*exp([0;brand;0;conj(flipud(brand))]);
 
 [fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
 
@@ -88,5 +87,5 @@ plot(tvals,msqerror_sfloat,'k--',tvals,msqerror_tfloat,'k-','LineWidth',2)
 h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
 xlabel('$T_{s}$','Interpreter','LaTeX','FontSize',30)
-ylabel('$\left|\left|\eta_{tr}(\cdot,t) - \bar{\eta}_{a}(\cdot,t)\right|\right|_{2}$','Interpreter','LaTeX','FontSize',30)
+ylabel('$\left|\left|\eta_{tr}(\cdot,t) - \bar{\eta}_{a}(\cdot,t)\right|\right|_{2}/\left|\left|\eta_{tr}(\cdot,t)\right|\right|_{2}$','Interpreter','LaTeX','FontSize',30)
 legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p}(x,t)$']},'Interpreter','LaTeX')

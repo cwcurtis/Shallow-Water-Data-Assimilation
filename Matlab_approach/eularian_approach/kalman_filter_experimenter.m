@@ -7,7 +7,7 @@ Kc = Kc + 1;
     
 ep = .1;
 mu = sqrt(ep);
-Mval = 0;  % number of terms in the DNO expansion
+Mval = 14;  % number of terms in the DNO expansion
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
@@ -86,11 +86,10 @@ rvec(1) = 0;
 xf = zeros(2*KT-1,Nens);
 
 parfor jj=1:Nens
-    arand = rand(K-1,1);
-    brand = rand(K-1,1);
-
-    avals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;arand;0;conj(flipud(arand))]);
-    bvals = KT*rvec/norm(rvec,2).*exp(2*pi*1i*[0;brand;0;conj(flipud(brand))]);
+    arand = 2*pi*1i*rand(K-1,1);
+    brand = 2*pi*1i*rand(K-1,1);
+    avals = KT*rvec/norm(rvec,2).*exp([0;arand;0;conj(flipud(arand))]);
+    bvals = KT*rvec/norm(rvec,2).*exp([0;brand;0;conj(flipud(brand))]);
     q0emp = real(ifft(bvals));
     xf(:,jj) = [real(avals(1:K));imag(avals(2:K));q0emp];    
 end
@@ -99,10 +98,8 @@ msqerror = zeros(nsamp,1);
 etaa = mean(xf(1:KT-1,:),2);
 nvec = [etaa(1:K);0] + 1i*[0;etaa(K+1:KT-1);0];
 etan = [nvec;conj(nvec(K:-1:2))];
-msqerror(1) = sqrt(Llx/K)*norm(real(ifft(etan)) - eta0);
+msqerror(1) = norm(real(ifft(etan)) - eta0)/norm(eta0);
 surf_dat(:,1) = eta0;
-
-params(5) = Mval;
 
 tvals = zeros(nmax,1);
 
@@ -124,7 +121,7 @@ for jj=1:nmax-1
     nvec = [xapprox(1:K);0] + 1i*[0;xapprox(K+1:KT-1);0];
     etan = [nvec;conj(nvec(K:-1:2))];
     etan(Kc:Kuc) = 0;
-    msqerror(jj+1) = sqrt(Llx/K)*norm(real(ifft(etan))-surf_dat(:,jj+1));    
+    msqerror(jj+1) = norm(real(ifft(etan))-surf_dat(:,jj+1))/norm(surf_dat(:,jj+1));    
     tvals(jj+1) = (jj+1)*dt;
 end
 
