@@ -1,9 +1,9 @@
 \subsection*{The Linear Kalman Filter}
 We briefly review the now classic and widely used linear Kalman filter before discussing its nonlinear variant, the ensemble Kalman filter.  The linear Kalman filter supposes that some true state of a system, described by the time dependent $N_{m}$-dimensional vector at time $t_{n}$, say $x^{(tr)}_{n}$, is given via the model 
 \[
-x^{(tr)}_{n} = Mx^{(tr)}_{n-1} + \epsilon^{(m)}_{n-1},
+x^{(tr)}_{n} = \mathcal{N}x^{(tr)}_{n-1} + \epsilon^{(m)}_{n-1},
 \]
-where $M$ is a model matrix which attempts to transform the prior true state into the next true state.  However, we suppose that the model is not complete to describe the true state, and that model deficencies manifest themselves via the error vector $\epsilon_{n-1}$.  The error vectors are assumed to consist of zero-mean Gaussian random variables with the further assumption that 
+where $\mathcal{N}$ is a model matrix which attempts to transform the prior true state into the next true state.  However, we suppose that the model is not complete to describe the true state, and that model deficencies manifest themselves via the error vector $\epsilon_{n-1}$.  The error vectors are assumed to consist of zero-mean Gaussian random variables with the further assumption that 
 \[
 \mathbb{E}\left[\epsilon_{j}^{(m)}\left(\epsilon_{k}^{(m)}\right)^{T}\right] = \delta_{jk} Q_{k},
 \]
@@ -38,7 +38,7 @@ P^{(a)}_{n} = (I-K_{n}H)P^{(f)}_{n}.
 \]
 At this point, we note that with a forecast estimate $x^{(f)}_{n}$ and error covariance matrix $P^{(f)}_{n}$, we were able to create a best estimate incorporating the data obtained via measurement to produce the analysis estimate $x^{(a)}_{n}$ with the corresponding error covariance matrix $P^{(a)}_{n}$.  To go to the next time step then, we let
 \[
-x^{(f)}_{n+1} = Mx^{(a)}_{n}, ~ P_{n+1}^{(f)} = MP^{(a)}_{n}M^{T} + Q_{n}.
+x^{(f)}_{n+1} = \mathcal{N}x^{(a)}_{n}, ~ P_{n+1}^{(f)} = \mathcal{N}P^{(a)}_{n}\mathcal{N}^{T} + Q_{n}.
 \]
 Note the recursive structure of the Kalman filter, whereby information from only the immediately previous time-step is necessary to progress to the next time step.  
 
@@ -74,7 +74,7 @@ x^{(f)}_{n+1} = f\left(x^{(a)}_{n}\right).
 Averages and approximate error covariance matrices are computed as above, and the Ensemble Kalman Filter cycle is continued.  
 
 \subsection*{Eularian Data Assimilation}
-In contrast to the Lagrangian approach, we focus on using Eularian measurements as the source of the data used in the Kalman filter.  Given that most wave height measurements are obtained via pressure plates, which corresponds to an Eularian measurement, this makes an Eularian data assimilation approach more natural than a Lagrangian one.  To do this, we suppose that we have at some set of fixed locations, say $x^{(p)}_{j}$, $j=1\cdots N_{f}$, pressure plates over which we obtain surface height measurements $\eta(x^{(p)}_{j},t)+\epsilon^{(d)}_{j}(t)$.  We likewise, using standard pseudo-spectral methods for solving the water-wave problem, have at any given time a numerically computed approximation to the surface, say $\tilde{\eta}(x,t)$, where 
+In contrast to a Lagrangian approach, we focus on using Eularian measurements as the source of the data used in the Kalman filter.  To do this, we suppose that we have at some set of fixed locations, say $x^{(p)}_{j}$, $j=1\cdots N_{f}$, pressure plates over which we obtain surface height measurements $\eta(x^{(p)}_{j},t)+\epsilon^{(d)}_{j}(t)$.  We likewise, using standard pseudo-spectral methods for solving the water-wave problem, have at any given time a numerically computed approximation to the surface, say $\tilde{\eta}(x,t)$, where 
 \[
 \tilde{\eta}(x,t) = \frac{1}{2K}\sum_{j=-K+1}^{K}(-1)^{j}\hat{\eta}_{j}e^{i\pi jx/L_{x}}, ~ x \in [-L_{x},L_{x}].
 \]
@@ -96,10 +96,4 @@ where
 \[
 c_{j,l} = (-1)^{l}\cos(l\tilde{x}_{j}), ~ s_{j,l} = (-1)^{l}\sin(l\tilde{x}_{j})
 \]
-with $\tilde{x}_{j} = \pi x^{(p)}_{j}/L_{x}$.  Throughout the remainder of this section, we take the covariance matrices $Q_{n}$ and $R_{n}$ to be $\sigma^{2}I$, where $I$ denotes the identity matrix appropriate to the corresponding dimensionality of the random variable in question, and $\sigma$ corresponds to the variance of the associated Gaussian random variables.  
-
-In a similar vein, we also have to decide how to initialize the filter.  In real-world conditions, we would generally be obliged to generate real world forecasts from existing buoy data as opposed to being able to capture a sea state via say acoustic imaging done from a boat.  Thus, we suppose that at time $t=0$, we have some set of pressure plate measurements giving us the initial surface heights $\eta(x_{j}^{p},0) + \epsilon^{(d)}_{j}$.  By interpolating and transforming this data, we can initialize the filter with respect to the surface height.  However, this leaves the determination of the initial surface velocity potential $q(x,0)$ in question.  It is worth noting that at best, one might hope to find a derivative of this quantity using the identity
-\[
-q_{x} = \phi_{x} + \epsilon \eta_{x}\phi_{z} = \dot{x} + \epsilon \eta_{x}\dot{z},
-\]
-so this is something that would still only be determined up to a constant.  Perhaps since the buoy is tethered one can possibly estimate some of the relevant quantities, but suffice to say, it is not immediately clear how one would determine an initial estimate of this variable.  Thus, without any other information, we initialize the surface velocity potential with zero-mean, $\sigma$-variance Gaussian noise.  Thus, we effectively look at a wide range of flow fields, limited only by the requirements on the variance and mean.  Note, in order then to get meaningful results, this inidicates that we should let the number of ensembles $N_{e}\gg1$, which is already in accord with best practice.  
+with $\tilde{x}_{j} = \pi x^{(p)}_{j}/L_{x}$.  Throughout the remainder of this section, we take the covariance matrices $Q_{n}$ and $R_{n}$ to be $\sigma^{2}I$, where $I$ denotes the identity matrix appropriate to the corresponding dimensionality of the random variable in question, and $\sigma$ corresponds to the variance of the associated Gaussian random variables.    

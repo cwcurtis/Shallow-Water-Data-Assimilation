@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  12 JUL 2018 16:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.8)  18 JUL 2018 14:52
 entering extended mode
 **data_assimilation.tex
 
@@ -227,21 +227,144 @@ Overfull \hbox (6.75432pt too wide) detected at line 84
 /cmm/m/it/10.95 ;
  []
 
-[6])
+) [6]
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
-ite_depth\Sections/assimilation.tex" [7] [8]) [9]
+ite_depth\Sections/assimilation.tex" [7]
+<./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf, id=39, 1433.355p
+t x 691.58376pt>
+File: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf Graphic file
+ (type pdf)
+
+<use ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf>
+Package pdftex.def Info: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_0.pdf used on input line 39.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf, id=40, 1433.355p
+t x 691.58376pt>
+File: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf Graphic file
+ (type pdf)
+
+<use ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf>
+Package pdftex.def Info: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_0.pdf used on input line 41.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf, id=41, 1433.355p
+t x 691.58376pt>
+File: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf Graphic file
+ (type pdf)
+
+<use ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf>
+Package pdftex.def Info: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_0.pdf used on input line 43.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+ [8]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf, id=45, 1433.355p
+t x 691.58376pt>
+File: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf Graphic file
+ (type pdf)
+
+<use ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf>
+Package pdftex.def Info: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_1.pdf used on input line 52.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf, id=46, 1433.355p
+t x 691.58376pt>
+File: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf Graphic file
+ (type pdf)
+
+<use ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf>
+Package pdftex.def Info: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_1.pdf used on input line 54.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf, id=47, 1433.355p
+t x 691.58376pt>
+File: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf Graphic file
+ (type pdf)
+
+<use ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf>
+Package pdftex.def Info: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_1.pdf used on input line 56.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf, id=48, 1433.355
+pt x 691.58376pt>
+File: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf Graphic fil
+e (type pdf)
+
+<use ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf>
+Package pdftex.def Info: ./Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_14.pdf used on input line 65.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf, id=49, 1433.355
+pt x 691.58376pt>
+File: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf Graphic fil
+e (type pdf)
+
+<use ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf>
+Package pdftex.def Info: ./Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_14.pdf used on input line 67.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+<./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf, id=50, 1433.355
+pt x 691.58376pt>
+File: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf Graphic fil
+e (type pdf)
+
+<use ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14.pdf>
+Package pdftex.def Info: ./Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M
+_14.pdf used on input line 69.
+(pdftex.def)             Requested size: 288.0011pt x 138.95801pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [9]
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
-ite_depth\data_assimilation.bbl" [10]) [11]
+ite_depth\data_assimilation.bbl"
+Overfull \vbox (3.55737pt too high) has occurred while \output is active []
+
+
+[10 <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_
+finite_depth/Images/pwise_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf> <D:/My
+ Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_dep
+th/Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf> <D:/My Documents
+/Desktop/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/
+error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_0.pdf>] [11 <D:/My Documents/Desk
+top/Shallow-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/pwise
+_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_1.pdf> <D:/My Documents/Desktop/Shallo
+w-Water-Data-Assimilation-Git-Clone/writeup_finite_depth/Images/pspec_sig_pt1_s
+rate_pt5_Nens_200_Np_4_tf_20_M_1.pdf> <D:/My Documents/Desktop/Shallow-Water-Da
+ta-Assimilation-Git-Clone/writeup_finite_depth/Images/error_sig_pt1_srate_pt5_N
+ens_200_Np_4_tf_20_M_1.pdf>] [12 <D:/My Documents/Desktop/Shallow-Water-Data-As
+similation-Git-Clone/writeup_finite_depth/Images/pwise_sig_pt1_srate_pt5_Nens_2
+00_Np_4_tf_20_M_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilatio
+n-Git-Clone/writeup_finite_depth/Images/pspec_sig_pt1_srate_pt5_Nens_200_Np_4_t
+f_20_M_14.pdf> <D:/My Documents/Desktop/Shallow-Water-Data-Assimilation-Git-Clo
+ne/writeup_finite_depth/Images/error_sig_pt1_srate_pt5_Nens_200_Np_4_tf_20_M_14
+.pdf>]) [13]
 ("D:\My Documents\Desktop\Shallow-Water-Data-Assimilation-Git-Clone\writeup_fin
 ite_depth\data_assimilation.aux") ) 
 Here is how much of TeX's memory you used:
- 3257 strings out of 493921
- 47488 string characters out of 3147276
+ 3311 strings out of 493921
+ 50402 string characters out of 3147276
  109362 words of memory out of 3000000
- 6523 multiletter control sequences out of 15000+200000
+ 6566 multiletter control sequences out of 15000+200000
  12319 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 38i,10n,38p,986b,205s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,12n,38p,986b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
@@ -256,9 +379,9 @@ amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data_assimilation.pdf (11 pages, 207841 bytes).
+Output written on data_assimilation.pdf (13 pages, 423645 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
