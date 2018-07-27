@@ -2,7 +2,6 @@ function data_plotter(K,Llx,tf,dt,dts,Nens,sig,Nplates)
 
 KT = 2*K;
 
-tic
 Xfloats = linspace(-Llx,Llx,Nplates/2)';
 Kmesh = pi/Llx*[ 0:K -K+1:-1 ]';
 k0 = pi/Llx;
@@ -15,11 +14,11 @@ brand = 2*pi*1i*rand(K-1,1);
 avals = KT*rvec/norm(rvec,2).*exp([0;arand;0;conj(flipud(arand))]);
 bvals = KT*rvec/norm(rvec,2).*exp([0;brand;0;conj(flipud(brand))]);
 
+tic
 [fin_dat_sfloat,tvals,msqerror_sfloat,stime,trcf,trca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
 
 Xfloats = linspace(-Llx,Llx,Nplates)';
 [fin_dat_tfloat,tvals,msqerror_tfloat,tstime,ttrcf,ttrca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
-toc
 
 approx_sf = fin_dat_sfloat(1:KT);
 exact_sol = fin_dat_sfloat(KT+1:2*KT);

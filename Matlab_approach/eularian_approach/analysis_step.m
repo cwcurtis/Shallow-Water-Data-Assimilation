@@ -1,4 +1,4 @@
-function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
+function [xf,ef,ea] = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     
     % xf - matrix representing ensemble of forecasts.  
     % Nens - number of members in the ensemble
@@ -11,6 +11,12 @@ function xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat)
     xfluc = xf - repmat(xmean,1,Nens);
     xfH = Hmat*xfluc(1:KT-1,:);
     Pf = xfluc*xfluc'/(Nens-1);
+    ef = trace(Pf);
     mrhs = (xfH*xfH'/(Nens-1) + cormat)\(dmat-Hmat*xf(1:KT-1,:));
         
     xf = xf +  Pf(:,1:KT-1)*Hmat'*mrhs;
+    
+    xfluca = xf - repmat(mean(xf,2),1,Nens);
+    Pa = xfluca*xfluca'/(Nens-1);
+    ea = trace(Pa);
+        

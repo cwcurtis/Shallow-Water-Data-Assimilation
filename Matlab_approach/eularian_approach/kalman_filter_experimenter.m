@@ -1,4 +1,4 @@
-function [fin_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals)
+function [fin_dat,tvals,msqerror,stime,trcf,trca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals)
 
 KT = 2*K;
 Kc = floor(KT/3);
@@ -7,7 +7,7 @@ Kc = Kc + 1;
     
 ep = .1;
 mu = sqrt(ep);
-Mval = 14;  % number of terms in the DNO expansion
+Mval = 1;  % number of terms in the DNO expansion
 
 params = [K ep mu Llx Mval dt dts Nens sig];
 Ndat = length(Xfloats);
@@ -94,7 +94,11 @@ parfor jj=1:Nens
     xf(:,jj) = [real(avals(1:K));imag(avals(2:K));q0emp];    
 end
 
-msqerror = zeros(nsamp,1);
+msqerror = zeros(nmax,1);
+trcf = zeros(nsamp,1);
+trca = zeros(nsamp,1);
+stime = zeros(nsamp,1);
+cnt = 1;
 etaa = mean(xf(1:KT-1,:),2);
 nvec = [etaa(1:K);0] + 1i*[0;etaa(K+1:KT-1);0];
 etan = [nvec;conj(nvec(K:-1:2))];
@@ -106,15 +110,20 @@ tvals = zeros(nmax,1);
 for jj=1:nmax-1
     % update each member of the ensemble
     parfor ll=1:Nens
-        xf(:,ll) = solver_rk4(params,L1,Kmesh,mDk,tnh,eLdt,eLdt2,xf(:,ll))
+        xf(:,ll) = solver_rk4(params,L1,Kmesh,mDk,tnh,eLdt,eLdt2,xf(:,ll));
     end
     
     % now we sample
     if mod(jj,nindt) == 0
         rmat =  sig*randn(Ndat,Nens);
         dmat = repmat(path_dat(:,jj/nindt),1,Nens) + rmat;
-        cormat = rmat*rmat'/(Nens-1);           
-        xf = analysis_step(K,Nens,xf,dmat,Hmat,cormat);                
+        %cormat = rmat*rmat'/(Nens-1);           
+        cormat = sig^2*eye(Ndat);
+        [xf,ef,ea] = analysis_step(K,Nens,xf,dmat,Hmat,cormat);   
+        trcf(cnt) = ef;
+        trca(cnt) = ea;
+        stime(cnt) = jj*dt;
+        cnt = cnt + 1;        
     end
     
     xapprox = mean(xf(1:KT-1,:),2);
