@@ -15,10 +15,10 @@ brand = 2*pi*1i*rand(K-1,1);
 avals = KT*rvec/norm(rvec,2).*exp([0;arand;0;conj(flipud(arand))]);
 bvals = KT*rvec/norm(rvec,2).*exp([0;brand;0;conj(flipud(brand))]);
 
-[fin_dat_sfloat,tvals,msqerror_sfloat,stime,trcf,trca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
+[fin_dat_sfloat,tvals,msqerror_sfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
 
 Xfloats = linspace(-Llx,Llx,Nplates)';
-[fin_dat_tfloat,tvals,msqerror_tfloat,tstime,ttrcf,ttrca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
+[fin_dat_tfloat,tvals,msqerror_tfloat] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals);
 toc
 
 approx_sf = fin_dat_sfloat(1:KT);
@@ -90,12 +90,4 @@ h = set(gca,'FontSize',30);
 set(h,'Interpreter','LaTeX')
 xlabel('$t$','Interpreter','LaTeX','FontSize',30)
 ylabel('$\left|\left|\eta_{tr}(\cdot,t) - \bar{\eta}_{a}(\cdot,t)\right|\right|_{2}/\left|\left|\eta_{tr}(\cdot,t)\right|\right|_{2}$','Interpreter','LaTeX','FontSize',30)
-legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p}(x,t)$']},'Interpreter','LaTeX')
-
-figure(5)
-plot(stime(1:end-1),trca(1:end-1),'k--',tstime(1:end-1),ttrca(1:end-1),'k-','LineWidth',2)
-h = set(gca,'FontSize',30);
-set(h,'Interpreter','LaTeX')
-xlabel('$T_{s}$','Interpreter','LaTeX','FontSize',30)
-ylabel('$\mbox{tr}(P_{a})$','Interpreter','LaTeX','FontSize',30)
 legend({['$\eta_{',num2str(Nplates/2),'p}(x,t)$'],['$\eta_{',num2str(Nplates),'p}(x,t)$']},'Interpreter','LaTeX')

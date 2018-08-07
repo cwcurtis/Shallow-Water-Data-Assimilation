@@ -1,4 +1,4 @@
-function [fin_dat,tvals,msqerror,stime,trcf,trca] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals)
+function [fin_dat,tvals,msqerror] = kalman_filter_experimenter(K,Llx,tf,dt,dts,Nens,sig,width,k0,Xfloats,avals,bvals)
 
 KT = 2*K;
 Kc = floor(KT/3);
@@ -95,10 +95,6 @@ parfor jj=1:Nens
 end
 
 msqerror = zeros(nmax,1);
-trcf = zeros(nsamp,1);
-trca = zeros(nsamp,1);
-stime = zeros(nsamp,1);
-cnt = 1;
 etaa = mean(xf(1:KT-1,:),2);
 nvec = [etaa(1:K);0] + 1i*[0;etaa(K+1:KT-1);0];
 etan = [nvec;conj(nvec(K:-1:2))];
@@ -106,6 +102,8 @@ msqerror(1) = norm(real(ifft(etan)) - eta0)/norm(eta0);
 surf_dat(:,1) = eta0;
 
 tvals = zeros(nmax,1);
+lam = 1;
+slam = .25;
 
 for jj=1:nmax-1
     % update each member of the ensemble
@@ -119,11 +117,7 @@ for jj=1:nmax-1
         dmat = repmat(path_dat(:,jj/nindt),1,Nens) + rmat;
         %cormat = rmat*rmat'/(Nens-1);           
         cormat = sig^2*eye(Ndat);
-        [xf,ef,ea] = analysis_step(K,Nens,xf,dmat,Hmat,cormat);   
-        trcf(cnt) = ef;
-        trca(cnt) = ea;
-        stime(cnt) = jj*dt;
-        cnt = cnt + 1;        
+        [xf,lam] = analysis_step(K,Nens,xf,dmat,Hmat,cormat,lam,slam,sig^2);           
     end
     
     xapprox = mean(xf(1:KT-1,:),2);

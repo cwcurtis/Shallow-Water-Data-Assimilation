@@ -1,4 +1,4 @@
-function [xf,lam] = analysis_step(K,Nens,xf,dmat,Hmat,cormat,lam,slam,sdat)
+function [xf,lam,slam] = analysis_step(K,Nens,xf,dmat,Hmat,cormat,lam,slam,sdat)
     
     % xf - matrix representing ensemble of forecasts.  
     % Nens - number of members in the ensemble
@@ -33,16 +33,17 @@ function [xf,lam] = analysis_step(K,Nens,xf,dmat,Hmat,cormat,lam,slam,sdat)
         lvalc = lvals(indc);
     end
     lamp = (lvalc-sdat)/spf;
-    %f = @(l) exp(-Dst^2/(2*(l*spf+sdat)))/sqrt(l*spf+sdat) * exp(-(l-lam)^2/(2*slam))/sqrt(slam);
-        
-    %slamp = -slam/2*log(f(lamp+sqrt(slam))/f(lamp));
-    if lamp > 1
+    f = @(l,s) = exp(-Dst^2/(2*(l*spf+sdat)));
+    
+    
+    slamp = -slam/2*log(Rt);
+    if slamp > 0 && lamp > 0
        lam = lamp;
-       %slam = slamp;
-       %disp('Updated inflation factor:')
-       %disp(lam)
-       %disp('Updated inflation variance:')
-       %disp(slam)
+       slam = slamp;
+       disp('Updated inflation factor:')
+       disp(lam)
+       disp('Updated inflation variance:')
+       disp(slam)
     end
     
     xfluc = sqrt(lam)*xfluc;
