@@ -16,7 +16,7 @@ function  usol = solver_rk4(params, L1, Kmesh, mDk, tnh, eLdt2, uint)
     
     G0 = real(ifft(L1.*qn));
     k1 = dt*nonlinearity(K,etan,qn,G0,ep,mu,Kmesh,mDk,tnh,Mval); 
-    eLdtk1 = eLdt2*k1;
+    eLdtk1 = eLd2*k1;
     
     %svec = eLdt2*(ufreq + .5*k1);
     svec = eLdtuf + .5*eLdtk1;
@@ -51,7 +51,7 @@ function  usol = solver_rk4(params, L1, Kmesh, mDk, tnh, eLdt2, uint)
     k4 = dt*nonlinearity(K,etah2,qh2,G0,ep,mu,Kmesh,mDk,tnh,Mval);
     
     %ufreq = eLdt*(ufreq+k1/6)+ eLdt2*(k2+k3)/3 + k4/6;
-    ufreq = eLdt2*(eLdtuf + eLdtk1/6 + (k2+k3)/3) + k4/6;
+    ufreq = eLdt2*(eLdtuf + eLdtk1/6)+ (k2+k3)/3) + k4/6;
     etan = ufreq(1:KT);
     qn = ufreq(KT+1:2*KT);
 

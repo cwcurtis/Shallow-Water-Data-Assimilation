@@ -55,6 +55,9 @@ Lop = [Zs diag(L1);-Is  Zs];
 eLdt2 = expm(dt*Lop/2.);
 eLdt = eLdt2*eLdt2;
 
+disp(size(eLdt2))
+disp(size(eL
+
 path_dat = zeros(Ndat,nsamp);
 surf_dat = zeros(KT,nmax);
 surf_dat(:,1) = eta0;
@@ -64,7 +67,7 @@ surf_dat(:,1) = eta0;
 dcnt = 2;
 for kk=1:nmax-1
     params(5) = 14;
-    un = solver_rk4(params, L1, Kmesh, mDk, tnh, eLdt2, un);
+    un = solver_rk4(params, L1, Kmesh, mDk, tnh, eLdt, eLdt2, un);
     nvec = [un(1:K);0] + 1i*[0;un(K+1:KT-1);0];
     etan = [nvec;conj(nvec(K:-1:2))];
     surf_dat(:,kk+1) = real(ifft(etan));       
@@ -103,12 +106,12 @@ surf_dat(:,1) = eta0;
 
 tvals = zeros(nmax,1);
 lam = 1;
-slam = .5;
+slam = .25;
 
 for jj=1:nmax-1
     % update each member of the ensemble
-    parfor ll=1:Nens
-        xf(:,ll) = solver_rk4(params,L1,Kmesh,mDk,tnh,eLdt2,xf(:,ll));
+    for ll=1:Nens
+        xf(:,ll) = solver_rk4(params,L1,Kmesh,mDk,tnh,eLdt,eLdt2,xf(:,ll));
     end
     
     % now we sample
